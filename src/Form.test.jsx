@@ -9,6 +9,17 @@ it("renders an in put which is autofocused", () => {
   expect(wrapper).toMatchInlineSnapshot(`
     <input
       autoFocus={true}
+      onChange={[Function]}
+      value=""
     />
   `);
+});
+
+it("allows input to be typed in", () => {
+  const wrapper = shallow(<Form />);
+  expect(wrapper.find("input").prop("value")).toEqual("");
+  wrapper
+    .find("input")
+    .simulate("change", { target: { value: "an important todo" } });
+  expect(wrapper.find("input").prop("value")).toEqual("an important todo");
 });
