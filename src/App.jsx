@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
+import Form from "./Form";
 
-const Form = () => <input autoFocus />;
 function App() {
   return (
     <div>
