@@ -12,6 +12,16 @@ class TodoPage {
   getInput() {
     return cy.get("input");
   }
+
+  getTodos() {
+    return cy.get("ul li");
+  }
+
+  add(text) {
+    cy.focused()
+      .type(text)
+      .type("{enter}");
+  }
 }
 
 export default TodoPage;

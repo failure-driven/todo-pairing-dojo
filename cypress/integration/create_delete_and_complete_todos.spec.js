@@ -12,4 +12,16 @@ describe("Create, delete and complete todos", () => {
 
     todo.getInput().focused;
   });
+
+  it.skip("can add a number of todos", () => {
+    const todo = new TodoPage();
+    todo.visit();
+
+    todo.getTodos().should("length", 0);
+
+    todo.add("buy some cheese");
+    todo.add("feed the cat");
+
+    todo.getTodos().should("length", 2);
+  });
 });
