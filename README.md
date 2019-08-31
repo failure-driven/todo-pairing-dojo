@@ -1,3 +1,22 @@
+<h1 align="center">Todo pairing demo</h1>
+
+## Getting started
+
+```sh
+yarn              # install dependencies
+yarn test         # run unit tests in watch mode
+yarn cypress open # open cypress interactive GUI
+yarn server       # run server, default localhost:3000
+```
+
+or
+
+```sh
+make build
+```
+
+## Original documentation
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
