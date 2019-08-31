@@ -9,5 +9,7 @@ describe("Create, delete and complete todos", () => {
       .getTitle()
       .should("exist")
       .contains("Todo - pairing dojo");
+
+    todo.getInput().focused;
   });
 });
