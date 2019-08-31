@@ -11,7 +11,9 @@ it("renders a title and a form", () => {
       <h1>
         Todo - pairing dojo
       </h1>
-      <Form />
+      <Form
+        addItem={[Function]}
+      />
     </div>
   `);
 });
