@@ -11,6 +11,7 @@ const Form = ({ addItem }) => {
   const handleKeyDown = event => {
     if (event.key === "Enter") {
       addItem(value);
+      setValue("");
     }
   };
 

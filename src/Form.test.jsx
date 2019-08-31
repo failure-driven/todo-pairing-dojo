@@ -25,7 +25,7 @@ it("allows input to be typed in", () => {
   expect(wrapper.find("input").prop("value")).toEqual("an important todo");
 });
 
-it("adds the item from the input value when enter is pressed", () => {
+it("adds the item from the input value when enter is pressed and clears value", () => {
   const mockAddItem = jest.fn();
   const wrapper = shallow(<Form addItem={mockAddItem} />);
   wrapper
@@ -33,4 +33,5 @@ it("adds the item from the input value when enter is pressed", () => {
     .simulate("change", { target: { value: "an important todo" } });
   wrapper.find("input").simulate("keyDown", { key: "Enter" });
   expect(mockAddItem).toHaveBeenCalledWith("an important todo");
+  expect(wrapper.find("input").prop("value")).toEqual("");
 });
