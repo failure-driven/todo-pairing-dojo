@@ -10,7 +10,9 @@ it("renders a title a form and a list", () => {
   expect(wrapper.find("Form")).toHaveLength(1);
   expect(wrapper.find("List")).toHaveLength(1);
   expect(wrapper).toMatchInlineSnapshot(`
-    <div>
+    <div
+      className="todo"
+    >
       <h1>
         Todo - pairing dojo
       </h1>

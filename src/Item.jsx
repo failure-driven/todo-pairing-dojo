@@ -4,7 +4,8 @@ import { func, shape, string } from "prop-types";
 const Item = ({ item: { id, text, isComplete }, toggleComplete }) => (
   <li className={isComplete ? "completed" : ""}>
     <input type='checkbox' onClick={() => toggleComplete(id)} />
-    {text}
+    <span className='checkmark' onClick={() => toggleComplete(id)}></span>
+    <span>{text}</span>
   </li>
 );
 

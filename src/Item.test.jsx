@@ -16,7 +16,13 @@ it("renders a list item", () => {
         onClick={[Function]}
         type="checkbox"
       />
-      todo text
+      <span
+        className="checkmark"
+        onClick={[Function]}
+      />
+      <span>
+        todo text
+      </span>
     </li>
   `);
 });

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import uuid from "uuid/v4";
-import "./App.css";
+import "./App.scss";
 import Form from "./Form";
 import List from "./List";
 
@@ -27,7 +27,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='todo'>
       <h1>Todo - pairing dojo</h1>
       <Form addItem={addItem} />
       <List items={items} toggleComplete={toggleComplete} />

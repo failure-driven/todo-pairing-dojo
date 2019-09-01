@@ -29,7 +29,7 @@ class TodoPage {
 
   completeTodo(index) {
     this.getTodos()
-      .get('input[type="checkbox"]')
+      .get("span.checkmark")
       .eq(index)
       .click();
   }
