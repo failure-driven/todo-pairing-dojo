@@ -19,6 +19,7 @@ it("renders a title a form and a list", () => {
       />
       <List
         items={Array []}
+        toggleComplete={[Function]}
       />
     </div>
   `);
@@ -33,5 +34,18 @@ it("adds a todo item when addItem is called", () => {
   wrapper.find("Form").prop("addItem")("todo item 1");
   expect(wrapper.find("List").prop("items")).toEqual([
     { id: "123", ordinal: 1, isComplete: false, text: "todo item 1" },
+  ]);
+});
+
+it("Marks item as complete when toggleComplete is called", () => {
+  const mockUuid = require("uuid/v4");
+  mockUuid.mockImplementationOnce(() => "123");
+
+  const wrapper = shallow(<App />);
+
+  wrapper.find("Form").prop("addItem")("todo 1");
+  wrapper.find("List").prop("toggleComplete")("123");
+  expect(wrapper.find("List").prop("items")).toEqual([
+    { id: "123", ordinal: 1, isComplete: true, text: "todo 1" },
   ]);
 });
