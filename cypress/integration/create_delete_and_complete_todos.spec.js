@@ -41,7 +41,7 @@ describe("Create, delete and complete todos", () => {
     todo.getCompletedTodos().should("length", 1);
   });
 
-  it.skip("can remove some todos", () => {
+  it("can remove some todos", () => {
     const todo = new TodoPage();
     todo.visit();
 
