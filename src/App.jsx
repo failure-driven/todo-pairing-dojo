@@ -26,11 +26,19 @@ function App() {
     );
   };
 
+  const removeItem = id => {
+    setItems(items.filter(element => element.id !== id));
+  };
+
   return (
     <div className='todo'>
       <h1>Todo - pairing dojo</h1>
       <Form addItem={addItem} />
-      <List items={items} toggleComplete={toggleComplete} />
+      <List
+        items={items}
+        toggleComplete={toggleComplete}
+        removeItem={removeItem}
+      />
     </div>
   );
 }
