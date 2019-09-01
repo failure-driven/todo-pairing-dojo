@@ -27,8 +27,8 @@ describe("when there are 2 items", () => {
   let wrapper = null;
   beforeEach(() => {
     const mockUuid = require("uuid/v4");
-    mockUuid.mockImplementationOnce(() => "ABC");
     mockUuid.mockImplementationOnce(() => "123");
+    mockUuid.mockImplementationOnce(() => "ABC");
 
     wrapper = shallow(<App />);
 
