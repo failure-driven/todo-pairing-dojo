@@ -22,6 +22,17 @@ class TodoPage {
       .type(text)
       .type("{enter}");
   }
+
+  getCompletedTodos() {
+    return cy.get('ul li[class="completed"]');
+  }
+
+  completeTodo(index) {
+    this.getTodos()
+      .get('input[type="checkbox"]')
+      .eq(index)
+      .click();
+  }
 }
 
 export default TodoPage;

@@ -24,4 +24,20 @@ describe("Create, delete and complete todos", () => {
 
     todo.getTodos().should("length", 2);
   });
+
+  it.skip("can complete some todos", () => {
+    const todo = new TodoPage();
+    todo.visit();
+
+    todo.add("buy some cheese");
+    todo.add("feed the cat");
+
+    todo.getTodos().should("length", 2);
+
+    todo.getCompletedTodos().should("length", 0);
+
+    todo.completeTodo(0);
+
+    todo.getCompletedTodos().should("length", 1);
+  });
 });
