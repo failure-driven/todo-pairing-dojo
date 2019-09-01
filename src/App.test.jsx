@@ -27,8 +27,8 @@ describe("when there are 2 items", () => {
   let wrapper = null;
   beforeEach(() => {
     const mockUuid = require("uuid/v4");
-    mockUuid.mockImplementationOnce(() => "123");
     mockUuid.mockImplementationOnce(() => "ABC");
+    mockUuid.mockImplementationOnce(() => "123");
 
     wrapper = shallow(<App />);
 
@@ -40,13 +40,6 @@ describe("when there are 2 items", () => {
     wrapper.find("List").prop("toggleComplete")("123");
     expect(wrapper.find("List").prop("items")).toEqual([
       { id: "123", ordinal: 1, isComplete: true, text: "todo 1" },
-      { id: "ABC", ordinal: 2, isComplete: false, text: "todo 2" },
-    ]);
-  });
-
-  it("removes an item when removeItem is called", () => {
-    wrapper.find("List").prop("removeItem")("123");
-    expect(wrapper.find("List").prop("items")).toEqual([
       { id: "ABC", ordinal: 2, isComplete: false, text: "todo 2" },
     ]);
   });

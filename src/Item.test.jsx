@@ -47,12 +47,4 @@ describe("when there is an item", () => {
       .simulate("click");
     expect(mockToggleComplete).toHaveBeenCalledWith("123");
   });
-
-  it("Calls removeItem when remove button is clicked", () => {
-    wrapper
-      .find("button")
-      .at(0)
-      .simulate("click");
-    expect(mockRemoveItem).toHaveBeenCalledWith("123");
-  });
 });

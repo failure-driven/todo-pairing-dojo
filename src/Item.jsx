@@ -10,7 +10,6 @@ const Item = ({
     <input type='checkbox' onClick={() => toggleComplete(id)} />
     <span className='checkmark' onClick={() => toggleComplete(id)}></span>
     <span>{text}</span>
-    <button onClick={() => removeItem(id)} />
   </li>
 );
 
