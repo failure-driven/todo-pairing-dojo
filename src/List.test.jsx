@@ -12,9 +12,11 @@ it("renders an empty unorderd list", () => {
 it("renders a list of items", () => {
   const items = [
     { id: 1, text: "todo item 1" },
-    { id: 2, text: "todo item 2" }
+    { id: 2, text: "todo item 2" },
   ];
-  const wrapper = shallow(<List items={items} toggleComplete={jest.fn()} />);
+  const wrapper = shallow(
+    <List items={items} toggleComplete={jest.fn()} />
+  );
   expect(wrapper.find("ul")).toHaveLength(1);
   expect(wrapper.find("ul Item")).toHaveLength(2);
   expect(wrapper).toMatchInlineSnapshot(`
