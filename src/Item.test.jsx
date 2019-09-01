@@ -3,7 +3,9 @@ import { shallow } from "enzyme";
 import Item from "./Item";
 
 it("renders a list item", () => {
-  const wrapper = shallow(<Item item={{ text: "todo text" }} />);
+  const wrapper = shallow(
+    <Item item={{ text: "todo text" }} toggleComplete={jest.fn()} />
+  );
   expect(wrapper.find("li").text()).toEqual("todo text");
   expect(wrapper).toMatchInlineSnapshot(
     `
