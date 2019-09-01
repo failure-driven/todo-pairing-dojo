@@ -2,10 +2,14 @@ PROJECT := todo-pairing-dojo
 
 default: build
 
-.PHONY: build demo1 demo2
+.PHONY: build master demo1 demo2
 
 build: 
 	bin/full-build
+
+master:
+	git checkout .
+	git checkout master
 
 demo1:
 	git checkout .
