@@ -33,6 +33,16 @@ class TodoPage {
       .eq(index)
       .click();
   }
+
+  removeTodo(index) {
+    this.getTodos()
+      .eq(index)
+      .trigger("mouseover")
+      .get("button")
+      .eq(index)
+      .click({ force: true }); // mouseover above does not show the button?
+    // TODO more info https://docs.cypress.io/api/commands/hover.html#Workarounds
+  }
 }
 
 export default TodoPage;
