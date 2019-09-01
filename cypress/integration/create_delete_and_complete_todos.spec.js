@@ -13,7 +13,7 @@ describe("Create, delete and complete todos", () => {
     todo.getInput().focused;
   });
 
-  it.skip("can add a number of todos", () => {
+  it("can add a number of todos", () => {
     const todo = new TodoPage();
     todo.visit();
 
