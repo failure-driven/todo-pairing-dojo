@@ -9,23 +9,6 @@ it("renders a title a form and a list", () => {
   expect(wrapper.find("h1").text()).toEqual("Todo - pairing dojo");
   expect(wrapper.find("Form")).toHaveLength(1);
   expect(wrapper.find("List")).toHaveLength(1);
-  expect(wrapper).toMatchInlineSnapshot(`
-    <div
-      className="todo"
-    >
-      <h1>
-        Todo - pairing dojo
-      </h1>
-      <Form
-        addItem={[Function]}
-      />
-      <List
-        items={Array []}
-        removeItem={[Function]}
-        toggleComplete={[Function]}
-      />
-    </div>
-  `);
 });
 
 it("adds a todo item when addItem is called", () => {
@@ -40,31 +23,31 @@ it("adds a todo item when addItem is called", () => {
   ]);
 });
 
-it("Marks item as complete when toggleComplete is called", () => {
-  const mockUuid = require("uuid/v4");
-  mockUuid.mockImplementationOnce(() => "123");
+describe("when there are 2 items", () => {
+  let wrapper = null;
+  beforeEach(() => {
+    const mockUuid = require("uuid/v4");
+    mockUuid.mockImplementationOnce(() => "123");
+    mockUuid.mockImplementationOnce(() => "ABC");
 
-  const wrapper = shallow(<App />);
+    wrapper = shallow(<App />);
 
-  wrapper.find("Form").prop("addItem")("todo 1");
-  wrapper.find("List").prop("toggleComplete")("123");
-  expect(wrapper.find("List").prop("items")).toEqual([
-    { id: "123", ordinal: 1, isComplete: true, text: "todo 1" },
-  ]);
-});
+    wrapper.find("Form").prop("addItem")("todo 1");
+    wrapper.find("Form").prop("addItem")("todo 2");
+  });
 
-it("removes an item if removeItem is called", () => {
-  const mockUuid = require("uuid/v4");
-  mockUuid.mockImplementationOnce(() => "123");
-  mockUuid.mockImplementationOnce(() => "ABC");
+  it("Marks item as complete when toggleComplete is called", () => {
+    wrapper.find("List").prop("toggleComplete")("123");
+    expect(wrapper.find("List").prop("items")).toEqual([
+      { id: "123", ordinal: 1, isComplete: true, text: "todo 1" },
+      { id: "ABC", ordinal: 2, isComplete: false, text: "todo 2" },
+    ]);
+  });
 
-  const wrapper = shallow(<App />);
-
-  wrapper.find("Form").prop("addItem")("todo 1");
-  wrapper.find("Form").prop("addItem")("todo 2");
-
-  wrapper.find("List").prop("removeItem")("123");
-  expect(wrapper.find("List").prop("items")).toEqual([
-    { id: "ABC", ordinal: 2, isComplete: false, text: "todo 2" },
-  ]);
+  it("removes an item when removeItem is called", () => {
+    wrapper.find("List").prop("removeItem")("123");
+    expect(wrapper.find("List").prop("items")).toEqual([
+      { id: "ABC", ordinal: 2, isComplete: false, text: "todo 2" },
+    ]);
+  });
 });
