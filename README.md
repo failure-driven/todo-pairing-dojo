@@ -1,5 +1,11 @@
 <h1 align="center">Todo pairing demo</h1>
 
+| "just remember this one, todo, pair"
+
+## Demo
+
+http://todo-pair.herokuapp.com/
+
 ## Getting started
 
 ```sh
