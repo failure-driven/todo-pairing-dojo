@@ -26,6 +26,15 @@ function App() {
           "5 - Mini retros",
         ].map((text, index) => createItem(text, index + 1))
       );
+    } else if (text === " fin.") {
+      setItems(
+        [
+          "Selena Small @selenasmall88",
+          "Michael Milewski @saramic",
+          "http://bit.ly/todo-pair",
+          "http://failure-driven.com",
+        ].map((text, index) => createItem(text, index + 1))
+      );
     } else {
       setItems([...items, createItem(text)]);
     }

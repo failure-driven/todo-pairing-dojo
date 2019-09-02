@@ -38,5 +38,21 @@ describe("Slides for the pairing talk", () => {
     todo.getTodos().should("length", 0);
 
     todo.add(" fin.");
+    todo
+      .getTodos()
+      .eq(0)
+      .should("text", "Selena Small @selenasmall88");
+    todo
+      .getTodos()
+      .eq(1)
+      .should("text", "Michael Milewski @saramic");
+    todo
+      .getTodos()
+      .eq(2)
+      .should("text", "http://bit.ly/todo-pair");
+    todo
+      .getTodos()
+      .eq(3)
+      .should("text", "http://failure-driven.com");
   });
 });

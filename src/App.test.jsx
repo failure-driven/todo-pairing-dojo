@@ -62,7 +62,7 @@ describe("Special slide todos", () => {
     mockUuid.mockImplementationOnce(() => "UUID_5");
   });
 
-  it('shows the checklist when "check." is typed', () => {
+  it('shows the checklist when " check." is typed', () => {
     const wrapper = shallow(<App />);
     wrapper.find("Form").prop("addItem")(" check.");
     expect(wrapper.find("List").prop("items")).toEqual([
@@ -95,6 +95,37 @@ describe("Special slide todos", () => {
         ordinal: 5,
         isComplete: false,
         text: "5 - Mini retros",
+      },
+    ]);
+  });
+
+  it('shows the final slide when " fin." is typed', () => {
+    const wrapper = shallow(<App />);
+    wrapper.find("Form").prop("addItem")(" fin.");
+    expect(wrapper.find("List").prop("items")).toEqual([
+      {
+        id: "UUID_1",
+        ordinal: 1,
+        isComplete: false,
+        text: "Selena Small @selenasmall88",
+      },
+      {
+        id: "UUID_2",
+        ordinal: 2,
+        isComplete: false,
+        text: "Michael Milewski @saramic",
+      },
+      {
+        id: "UUID_3",
+        ordinal: 3,
+        isComplete: false,
+        text: "http://bit.ly/todo-pair",
+      },
+      {
+        id: "UUID_4",
+        ordinal: 4,
+        isComplete: false,
+        text: "http://failure-driven.com",
       },
     ]);
   });
