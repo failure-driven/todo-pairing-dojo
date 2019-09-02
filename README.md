@@ -1,6 +1,6 @@
 <h1 align="center">Todo pairing demo</h1>
 
-<h3>"just remember this one todo, pair"</h3>
+<h3 align="center">"just remember this one todo, pair"</h3>
 
 ## Demo
 
