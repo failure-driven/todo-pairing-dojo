@@ -7,14 +7,28 @@ import List from "./List";
 function App() {
   const [items, setItems] = useState([]);
 
-  const addItem = text => {
-    const item = {
+  const createItem = (text, index) => {
+    return {
       id: uuid(),
-      ordinal: items.length + 1,
+      ordinal: index || items.length + 1,
       isComplete: false,
       text: text,
     };
-    setItems([...items, item]);
+  };
+  const addItem = text => {
+    if (text === " check.") {
+      setItems(
+        [
+          "1 - Ergonomics",
+          "2 - Distractions",
+          "3 - Work",
+          "4 - Regular breaks",
+          "5 - Mini retros",
+        ].map((text, index) => createItem(text, index + 1))
+      );
+    } else {
+      setItems([...items, createItem(text)]);
+    }
   };
 
   const toggleIsComplete = item =>

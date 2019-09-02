@@ -51,3 +51,51 @@ describe("when there are 2 items", () => {
     ]);
   });
 });
+
+describe("Special slide todos", () => {
+  beforeEach(() => {
+    const mockUuid = require("uuid/v4");
+    mockUuid.mockImplementationOnce(() => "UUID_1");
+    mockUuid.mockImplementationOnce(() => "UUID_2");
+    mockUuid.mockImplementationOnce(() => "UUID_3");
+    mockUuid.mockImplementationOnce(() => "UUID_4");
+    mockUuid.mockImplementationOnce(() => "UUID_5");
+  });
+
+  it('shows the checklist when "check." is typed', () => {
+    const wrapper = shallow(<App />);
+    wrapper.find("Form").prop("addItem")(" check.");
+    expect(wrapper.find("List").prop("items")).toEqual([
+      {
+        id: "UUID_1",
+        ordinal: 1,
+        isComplete: false,
+        text: "1 - Ergonomics",
+      },
+      {
+        id: "UUID_2",
+        ordinal: 2,
+        isComplete: false,
+        text: "2 - Distractions",
+      },
+      {
+        id: "UUID_3",
+        ordinal: 3,
+        isComplete: false,
+        text: "3 - Work",
+      },
+      {
+        id: "UUID_4",
+        ordinal: 4,
+        isComplete: false,
+        text: "4 - Regular breaks",
+      },
+      {
+        id: "UUID_5",
+        ordinal: 5,
+        isComplete: false,
+        text: "5 - Mini retros",
+      },
+    ]);
+  });
+});
