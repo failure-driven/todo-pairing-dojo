@@ -24,3 +24,6 @@ yarn-error.log*
 
 # cypress video
 cypress/videos/*.mp4
+
+# no idea
+.idea
