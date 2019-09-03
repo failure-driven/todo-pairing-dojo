@@ -64,7 +64,7 @@ describe("Special slide todos", () => {
 
   it('shows the checklist when " check." is typed', () => {
     const wrapper = shallow(<App />);
-    wrapper.find("Form").prop("addItem")(" check.");
+    wrapper.find("Form").prop("addItem")("c");
     expect(wrapper.find("List").prop("items")).toEqual([
       {
         id: "UUID_1",
@@ -101,31 +101,37 @@ describe("Special slide todos", () => {
 
   it('shows the final slide when " fin." is typed', () => {
     const wrapper = shallow(<App />);
-    wrapper.find("Form").prop("addItem")(" fin.");
+    wrapper.find("Form").prop("addItem")("f");
     expect(wrapper.find("List").prop("items")).toEqual([
       {
         id: "UUID_1",
         ordinal: 1,
         isComplete: false,
-        text: "Selena Small @selenasmall88",
+        text: "1 - Ergonomics",
       },
       {
         id: "UUID_2",
         ordinal: 2,
         isComplete: false,
-        text: "Michael Milewski @saramic",
+        text: "2 - Distractions",
       },
       {
         id: "UUID_3",
         ordinal: 3,
         isComplete: false,
-        text: "http://bit.ly/todo-pair",
+        text: "3 - Work",
       },
       {
         id: "UUID_4",
         ordinal: 4,
         isComplete: false,
-        text: "http://failure-driven.com",
+        text: "4 - Regular breaks",
+      },
+      {
+        id: "UUID_5",
+        ordinal: 5,
+        isComplete: false,
+        text: "5 - Mini retros",
       },
     ]);
   });

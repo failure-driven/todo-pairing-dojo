@@ -7,7 +7,7 @@ describe("Slides for the pairing talk", () => {
 
     todo.getTodos().should("length", 0);
 
-    todo.add(" check.");
+    todo.add("c");
 
     todo
       .getTodos()
@@ -37,22 +37,26 @@ describe("Slides for the pairing talk", () => {
 
     todo.getTodos().should("length", 0);
 
-    todo.add(" fin.");
+    todo.add("f");
     todo
       .getTodos()
       .eq(0)
-      .should("text", "Selena Small @selenasmall88");
+      .should("text", "1 - Ergonomics");
     todo
       .getTodos()
       .eq(1)
-      .should("text", "Michael Milewski @saramic");
+      .should("text", "2 - Distractions");
     todo
       .getTodos()
       .eq(2)
-      .should("text", "http://bit.ly/todo-pair");
+      .should("text", "3 - Work");
     todo
       .getTodos()
       .eq(3)
-      .should("text", "http://failure-driven.com");
+      .should("text", "4 - Regular breaks");
+    todo
+      .getTodos()
+      .eq(4)
+      .should("text", "5 - Mini retros");
   });
 });

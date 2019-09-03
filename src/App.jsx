@@ -16,7 +16,7 @@ function App() {
     };
   };
   const addItem = text => {
-    if (text === " check.") {
+    if (text === "c" || text === "f") {
       setItems(
         [
           "1 - Ergonomics",
@@ -24,15 +24,6 @@ function App() {
           "3 - Work",
           "4 - Regular breaks",
           "5 - Mini retros",
-        ].map((text, index) => createItem(text, index + 1))
-      );
-    } else if (text === " fin.") {
-      setItems(
-        [
-          "Selena Small @selenasmall88",
-          "Michael Milewski @saramic",
-          "http://bit.ly/todo-pair",
-          "http://failure-driven.com",
         ].map((text, index) => createItem(text, index + 1))
       );
     } else {
