@@ -25,6 +25,7 @@ $background-color: #161418;
   }
 
   input {
+    z-index: 100;
     position: relative;
     margin: 0;
     margin-bottom: 1.75em;
@@ -46,6 +47,7 @@ $background-color: #161418;
     padding: 0;
     list-style: none;
     li {
+      z-index: 100;
       border-bottom: 1px solid #ededed;
       position: relative;
       margin: 0;
@@ -153,6 +155,21 @@ $background-color: #161418;
         display: block;
       }
     }
+  }
+
+  .final {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(/header_selena_michael_opacity.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1650px;
   }
 }
 

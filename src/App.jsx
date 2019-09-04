@@ -4,8 +4,11 @@ import "./App.scss";
 import Form from "./Form";
 import List from "./List";
 
+const Final = () => <div className='final'></div>;
+
 function App() {
   const [items, setItems] = useState([]);
+  const [showFinal, setShowFinal] = useState(false);
 
   const createItem = (text, index) => {
     return {
@@ -16,6 +19,9 @@ function App() {
     };
   };
   const addItem = text => {
+    if (text === "f") {
+      setShowFinal(true);
+    }
     if (text === "c" || text === "f") {
       setItems(
         [
@@ -26,7 +32,11 @@ function App() {
           "5 - Mini retros",
         ].map((text, index) => createItem(text, index + 1))
       );
+    } else if (text === "cl") {
+      setShowFinal(false);
+      setItems([]);
     } else {
+      setShowFinal(false);
       setItems([...items, createItem(text)]);
     }
   };
@@ -53,6 +63,7 @@ function App() {
         toggleComplete={toggleComplete}
         removeItem={removeItem}
       />
+      {showFinal && <Final />}
     </div>
   );
 }
