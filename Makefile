@@ -2,7 +2,7 @@ PROJECT := todo-pairing-dojo
 
 default: build
 
-.PHONY: build master 1 2
+.PHONY: build master 1 2 n
 
 build: 
 	bin/full-build
@@ -21,4 +21,8 @@ master:
 	git checkout .
 	git clean -fd
 	git checkout demo/no-delete
+
+# n for notifications
+n:
+	bin/notifications.rb
 
