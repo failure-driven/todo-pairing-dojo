@@ -3,12 +3,14 @@ import uuid from "uuid/v4";
 import "./App.scss";
 import Form from "./Form";
 import List from "./List";
+import Whiteboard from "./Whiteboard";
 
 const Final = () => <div className='final'></div>;
 
 function App() {
   const [items, setItems] = useState([]);
   const [showFinal, setShowFinal] = useState(false);
+  const [showWhiteboard, setShowWhiteboard] = useState(false);
 
   const createItem = (text, index) => {
     return {
@@ -19,6 +21,10 @@ function App() {
     };
   };
   const addItem = text => {
+    if (text === "w") {
+      setShowWhiteboard(true);
+      setItems([]);
+    }
     if (text === "f") {
       setShowFinal(true);
     }
@@ -53,6 +59,15 @@ function App() {
   const removeItem = id => {
     setItems(items.filter(element => element.id !== id));
   };
+
+  if (showWhiteboard)
+    return (
+      <Whiteboard
+        hideWhiteboard={() => {
+          setShowWhiteboard(false);
+        }}
+      />
+    );
 
   return (
     <div className='todo'>
