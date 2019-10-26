@@ -176,6 +176,9 @@ $background-color: #161418;
 .whiteboard {
   font-family: "Montserrat", sans-serif;
   height: 100%;
+  &:focus {
+    outline: none;
+  }
 
   h1 {
     text-align: center;
