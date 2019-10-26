@@ -23,5 +23,5 @@ while true
 
   system "osascript -e '#{command}'"
 
-  sleep rand(5..15)
+  sleep rand(1..3)
 end
