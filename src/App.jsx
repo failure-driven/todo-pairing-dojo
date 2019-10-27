@@ -38,7 +38,7 @@ function App() {
           "5 - Mini retros",
         ].map((text, index) => createItem(text, index + 1))
       );
-    } else if (text === "cl") {
+    } else if (text === "cl" || text === "q") {
       setShowFinal(false);
       setItems([]);
     } else {
