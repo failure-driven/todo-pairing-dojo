@@ -3,9 +3,15 @@ import { func } from "prop-types";
 
 export default function Whiteboard({ hideWhiteboard }) {
   const data = [
-    { image_source: "/slides/slide_01.png" },
-    { image_source: "/slides/slide_02.png" },
-    { image_source: "/slides/slide_03.png" },
+    { image_source: "/slides/slide.001.jpeg" },
+    { image_source: "/slides/slide.002.jpeg" },
+    { image_source: "/slides/slide.003.jpeg" },
+    { image_source: "/slides/slide.004.jpeg" },
+    { image_source: "/slides/slide.005.jpeg" },
+    { image_source: "/slides/slide.006.jpeg" },
+    { image_source: "/slides/slide.007.jpeg" },
+    { image_source: "/slides/slide.008.jpeg" },
+    { image_source: "/slides/slide.009.jpeg" },
   ];
   const [index, setIndex] = useState(0);
 
@@ -48,9 +54,7 @@ export default function Whiteboard({ hideWhiteboard }) {
       autoFocus
       tabIndex='0'
     >
-      <h1>Whiteboard</h1>
       <main>
-        <h1>slide {index + 1}</h1>
         <img src={data[index].image_source} alt={`slide ${index}`} />
       </main>
     </div>

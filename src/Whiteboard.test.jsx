@@ -12,17 +12,10 @@ it("renders a whiteboard explanation", () => {
       onKeyDown={[Function]}
       tabIndex="0"
     >
-      <h1>
-        Whiteboard
-      </h1>
       <main>
-        <h1>
-          slide 
-          1
-        </h1>
         <img
           alt="slide 0"
-          src="/slides/slide_01.png"
+          src="/slides/slide.001.jpeg"
         />
       </main>
     </div>
