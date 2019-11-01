@@ -1,25 +1,25 @@
 import React, { useState } from "react";
-import { func, array } from "prop-types";
+import { func, number, array } from "prop-types";
 
-export default function Slideshow({ hideSlideshow, data }) {
-  const [index, setIndex] = useState(0);
+export default function Slideshow({ hideSlideshow, index, data }) {
+  const [slideIndex, setSlideIndex] = useState(index);
 
   const handleKeyPress = event => {
     if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
-      let localIndex = index;
+      let localIndex = slideIndex;
       if (event.key === "ArrowRight") {
-        localIndex = index + 1;
+        localIndex = slideIndex + 1;
         if (data.length <= localIndex) {
           localIndex = 0;
         }
       }
       if (event.key === "ArrowLeft") {
-        localIndex = index - 1;
+        localIndex = slideIndex - 1;
         if (localIndex < 0) {
           localIndex = data.length - 1;
         }
       }
-      setIndex(localIndex);
+      setSlideIndex(localIndex);
     }
     if (event.key === "q") {
       hideSlideshow();
@@ -44,7 +44,10 @@ export default function Slideshow({ hideSlideshow, data }) {
       tabIndex='0'
     >
       <main>
-        <img src={data[index].image_source} alt={`slide ${index}`} />
+        <img
+          src={data[slideIndex].image_source}
+          alt={`slide ${slideIndex}`}
+        />
       </main>
     </div>
   );
@@ -52,8 +55,11 @@ export default function Slideshow({ hideSlideshow, data }) {
 
 Slideshow.propTypes = {
   hideSlideshow: func,
-  data: array.isRequired
+  data: array.isRequired,
+  index: number,
 };
+
 Slideshow.defaultProps = {
-  hideSlideshow: () => {}
+  hideSlideshow: () => {},
+  index: 0,
 };

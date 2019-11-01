@@ -19,10 +19,45 @@ const whiteboardData = [
   { image_source: "/slides/slide.009.jpeg" },
 ];
 
+const backgroundData = [
+  {
+    image_source:
+      "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
+    credit: "Photo by Austin Distel on Unsplash",
+    credit_url: "https://unsplash.com/photos/wawEfYdpkag",
+  },
+  {
+    image_source:
+      "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
+    credit: "Photo by Nathan Dumlao on Unsplash",
+    credit_url: "https://unsplash.com/photos/6VhPY27jdps",
+  },
+  {
+    image_source: "/slides/background/03_fresho_build_punishment.gif",
+    credit: "Selena & Michael",
+    credit_url: "https://failure-driven.com",
+  },
+  {
+    image_source:
+      "/slides/background/04_john-fornander-C56oCEdK14c-unsplash.jpg",
+    credit: "Photo by John Fornander on Unsplash",
+    credit_url: "https://unsplash.com/photos/C56oCEdK14c",
+  },
+
+  {
+    image_source:
+      "/slides/background/05_brooke-lark-pGM4sjt_BdQ-unsplash.jpg",
+    credit: "Photo by Brooke Lark on Unsplash",
+    credit_url: "https://unsplash.com/photos/pGM4sjt_BdQ",
+  },
+];
+
 function App() {
   const [items, setItems] = useState([]);
   const [showFinal, setShowFinal] = useState(false);
   const [showSlideshow, setShowSlideshow] = useState(false);
+  const [slideshowData, setSlideshowData] = useState();
+  const [slideshowIndex, setSlideshowIndex] = useState();
 
   const createItem = (text, index) => {
     return {
@@ -34,6 +69,14 @@ function App() {
   };
   const addItem = text => {
     if (text === "w") {
+      setSlideshowData(whiteboardData);
+      setSlideshowIndex(0);
+      setShowSlideshow(true);
+      setItems([]);
+    }
+    if (["1", "2", "3", "4", "5"].includes(text)) {
+      setSlideshowData(backgroundData);
+      setSlideshowIndex(parseInt(text, 10) - 1);
       setShowSlideshow(true);
       setItems([]);
     }
@@ -78,7 +121,8 @@ function App() {
         hideSlideshow={() => {
           setShowSlideshow(false);
         }}
-        data={whiteboardData}
+        data={slideshowData}
+        index={slideshowIndex}
       />
     );
 
