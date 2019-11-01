@@ -7,6 +7,18 @@ import Whiteboard from "./Whiteboard";
 
 const Final = () => <div className='final'></div>;
 
+const whiteboardData = [
+  { image_source: "/slides/slide.001.jpeg" },
+  { image_source: "/slides/slide.002.jpeg" },
+  { image_source: "/slides/slide.003.jpeg" },
+  { image_source: "/slides/slide.004.jpeg" },
+  { image_source: "/slides/slide.005.jpeg" },
+  { image_source: "/slides/slide.006.jpeg" },
+  { image_source: "/slides/slide.007.jpeg" },
+  { image_source: "/slides/slide.008.jpeg" },
+  { image_source: "/slides/slide.009.jpeg" },
+];
+
 function App() {
   const [items, setItems] = useState([]);
   const [showFinal, setShowFinal] = useState(false);
@@ -66,6 +78,7 @@ function App() {
         hideWhiteboard={() => {
           setShowWhiteboard(false);
         }}
+        data={whiteboardData}
       />
     );
 

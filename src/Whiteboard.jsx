@@ -1,18 +1,7 @@
 import React, { useState } from "react";
-import { func } from "prop-types";
+import { func, array } from "prop-types";
 
-export default function Whiteboard({ hideWhiteboard }) {
-  const data = [
-    { image_source: "/slides/slide.001.jpeg" },
-    { image_source: "/slides/slide.002.jpeg" },
-    { image_source: "/slides/slide.003.jpeg" },
-    { image_source: "/slides/slide.004.jpeg" },
-    { image_source: "/slides/slide.005.jpeg" },
-    { image_source: "/slides/slide.006.jpeg" },
-    { image_source: "/slides/slide.007.jpeg" },
-    { image_source: "/slides/slide.008.jpeg" },
-    { image_source: "/slides/slide.009.jpeg" },
-  ];
+export default function Whiteboard({ hideWhiteboard, data }) {
   const [index, setIndex] = useState(0);
 
   const handleKeyPress = event => {
@@ -63,6 +52,7 @@ export default function Whiteboard({ hideWhiteboard }) {
 
 Whiteboard.propTypes = {
   hideWhiteboard: func,
+  data: array.isRequired,
 };
 Whiteboard.defaultProps = {
   hideWhiteboard: () => {},

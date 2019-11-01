@@ -3,7 +3,12 @@ import { shallow } from "enzyme";
 import Whiteboard from "./Whiteboard";
 
 it("renders a whiteboard explanation", () => {
-  const wrapper = shallow(<Whiteboard hideWhiteboard={() => {}} />);
+  const wrapper = shallow(
+    <Whiteboard
+      hideWhiteboard={() => {}}
+      data={[{ alt: "slide 0", image_source: "/slides/slide.001.jpeg" }]}
+    />
+  );
   expect(wrapper).toMatchInlineSnapshot(`
     <div
       autoFocus={true}
