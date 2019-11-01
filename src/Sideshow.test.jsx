@@ -1,11 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Whiteboard from "./Whiteboard";
+import Slideshow from "./Slideshow";
 
-it("renders a whiteboard explanation", () => {
+it("renders a slideshow explanation", () => {
   const wrapper = shallow(
-    <Whiteboard
-      hideWhiteboard={() => {}}
+    <Slideshow
+      hideSlideshow={() => {}}
       data={[{ alt: "slide 0", image_source: "/slides/slide.001.jpeg" }]}
     />
   );

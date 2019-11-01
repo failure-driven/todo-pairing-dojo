@@ -3,7 +3,7 @@ import uuid from "uuid/v4";
 import "./App.scss";
 import Form from "./Form";
 import List from "./List";
-import Whiteboard from "./Whiteboard";
+import Slideshow from "./Slideshow";
 
 const Final = () => <div className='final'></div>;
 
@@ -22,7 +22,7 @@ const whiteboardData = [
 function App() {
   const [items, setItems] = useState([]);
   const [showFinal, setShowFinal] = useState(false);
-  const [showWhiteboard, setShowWhiteboard] = useState(false);
+  const [showSlideshow, setShowSlideshow] = useState(false);
 
   const createItem = (text, index) => {
     return {
@@ -34,7 +34,7 @@ function App() {
   };
   const addItem = text => {
     if (text === "w") {
-      setShowWhiteboard(true);
+      setShowSlideshow(true);
       setItems([]);
     }
     if (text === "f") {
@@ -72,11 +72,11 @@ function App() {
     setItems(items.filter(element => element.id !== id));
   };
 
-  if (showWhiteboard)
+  if (showSlideshow)
     return (
-      <Whiteboard
-        hideWhiteboard={() => {
-          setShowWhiteboard(false);
+      <Slideshow
+        hideSlideshow={() => {
+          setShowSlideshow(false);
         }}
         data={whiteboardData}
       />

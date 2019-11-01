@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { func, array } from "prop-types";
 
-export default function Whiteboard({ hideWhiteboard, data }) {
+export default function Slideshow({ hideSlideshow, data }) {
   const [index, setIndex] = useState(0);
 
   const handleKeyPress = event => {
@@ -22,7 +22,7 @@ export default function Whiteboard({ hideWhiteboard, data }) {
       setIndex(localIndex);
     }
     if (event.key === "q") {
-      hideWhiteboard();
+      hideSlideshow();
     }
   };
 
@@ -50,10 +50,10 @@ export default function Whiteboard({ hideWhiteboard, data }) {
   );
 }
 
-Whiteboard.propTypes = {
-  hideWhiteboard: func,
-  data: array.isRequired,
+Slideshow.propTypes = {
+  hideSlideshow: func,
+  data: array.isRequired
 };
-Whiteboard.defaultProps = {
-  hideWhiteboard: () => {},
+Slideshow.defaultProps = {
+  hideSlideshow: () => {}
 };
