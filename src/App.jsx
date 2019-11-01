@@ -58,6 +58,7 @@ function App() {
   const [showSlideshow, setShowSlideshow] = useState(false);
   const [slideshowData, setSlideshowData] = useState();
   const [slideshowIndex, setSlideshowIndex] = useState();
+  const [endState, setEndState] = useState(false);
 
   const createItem = (text, index) => {
     return {
@@ -83,7 +84,20 @@ function App() {
     if (text === "f") {
       setShowFinal(true);
     }
-    if (text === "c" || text === "f") {
+    if (text === "" && endState) {
+      if (items.length === 1)
+        setItems([...items, createItem("2 - Distractions")]);
+      if (items.length === 2) setItems([...items, createItem("3 - Work")]);
+      if (items.length === 3)
+        setItems([...items, createItem("4 - Regular breaks")]);
+      if (items.length === 4)
+        setItems([...items, createItem("5 - Mini retros")]);
+      if (items.length > 4) setShowFinal(true);
+    } else if (text === "e") {
+      setShowFinal(false);
+      setEndState(true);
+      setItems([createItem("1 - Ergonomics")]);
+    } else if (text === "c" || text === "f") {
       setItems(
         [
           "1 - Ergonomics",
@@ -94,6 +108,7 @@ function App() {
         ].map((text, index) => createItem(text, index + 1))
       );
     } else if (text === "cl" || text === "q") {
+      setEndState(false);
       setShowFinal(false);
       setItems([]);
     } else {
