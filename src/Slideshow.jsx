@@ -20,8 +20,7 @@ export default function Slideshow({ hideSlideshow, index, data }) {
         }
       }
       setSlideIndex(localIndex);
-    }
-    if (event.key === "q") {
+    } else {
       hideSlideshow();
     }
   };
