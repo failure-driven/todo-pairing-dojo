@@ -59,6 +59,7 @@ function App() {
   const [slideshowData, setSlideshowData] = useState();
   const [slideshowIndex, setSlideshowIndex] = useState();
   const [endState, setEndState] = useState(false);
+  const [title, setTitle] = useState("Todo - pairing dojo");
 
   const createItem = (text, index) => {
     return {
@@ -83,18 +84,24 @@ function App() {
     }
     if (text === "f") {
       setShowFinal(true);
+      setTitle("10x - pair programming");
     }
     if (text === "" && endState) {
       if (items.length === 1)
         setItems([...items, createItem("2 - Distractions")]);
-      if (items.length === 2) setItems([...items, createItem("3 - Work")]);
-      if (items.length === 3)
-        setItems([...items, createItem("4 - Regular breaks")]);
-      if (items.length === 4)
-        setItems([...items, createItem("5 - Mini retros")]);
-      if (items.length > 4) setShowFinal(true);
+      if (items.length === 2)
+        setItems([...items, createItem("3 - Regular breaks")]);
+      if (items.length === 3) setItems([...items, createItem("4 - Plan")]);
+      if (items.length === 4) setItems([...items, createItem("5 - Work")]);
+      if (items.length === 5)
+        setItems([...items, createItem("6 - Mini retros")]);
+      if (items.length > 4) {
+        setShowFinal(true);
+        setTitle("10x - pair programming");
+      }
     } else if (text === "e") {
       setShowFinal(false);
+      setTitle("Todo - pairing dojo");
       setEndState(true);
       setItems([createItem("1 - Ergonomics")]);
     } else if (text === "c" || text === "f") {
@@ -102,17 +109,20 @@ function App() {
         [
           "1 - Ergonomics",
           "2 - Distractions",
-          "3 - Work",
-          "4 - Regular breaks",
-          "5 - Mini retros",
+          "3 - Regular breaks",
+          "4 - Plan",
+          "5 - Work",
+          "6 - Mini retros",
         ].map((text, index) => createItem(text, index + 1))
       );
     } else if (text === "cl" || text === "q") {
       setEndState(false);
       setShowFinal(false);
+      setTitle("Todo - pairing dojo");
       setItems([]);
     } else {
       setShowFinal(false);
+      setTitle("Todo - pairing dojo");
       setItems([...items, createItem(text)]);
     }
   };
@@ -143,7 +153,7 @@ function App() {
 
   return (
     <div className='todo'>
-      <h1>Todo - pairing dojo</h1>
+      <h1>{title}</h1>
       <Form addItem={addItem} />
       <List
         items={items}
