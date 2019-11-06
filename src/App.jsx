@@ -33,7 +33,7 @@ const backgroundData = [
     credit_url: "https://unsplash.com/photos/6VhPY27jdps",
   },
   {
-    image_source: "/slides/background/03_fresho_build_punishment.gif",
+    image_source: "/slides/background/03_michael_run_smooth.gif",
     credit: "Selena & Michael",
     credit_url: "https://failure-driven.com",
   },
