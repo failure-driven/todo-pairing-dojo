@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
-while true
+start = Time.now
+
+while Time.now - start < 30
   notification = [
     "this is getting real",
     "time for a break",
@@ -23,5 +25,5 @@ while true
 
   system "osascript -e '#{command}'"
 
-  sleep rand(1..3)
+  sleep 3
 end
