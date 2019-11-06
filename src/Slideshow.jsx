@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { func, number, array } from "prop-types";
 
 export default function Slideshow({ hideSlideshow, index, data }) {
@@ -35,8 +35,15 @@ export default function Slideshow({ hideSlideshow, index, data }) {
     // setIndex(localIndex);
   };
 
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <div
+      ref={inputRef}
       className='whiteboard'
       onKeyDown={handleKeyPress}
       onClick={handleClick}
