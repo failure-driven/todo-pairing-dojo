@@ -50,6 +50,15 @@ const backgroundData = [
     credit: "Photo by Brooke Lark on Unsplash",
     credit_url: "https://unsplash.com/photos/pGM4sjt_BdQ",
   },
+  { image_source: "/slides/slide.001.jpeg" },
+  { image_source: "/slides/slide.002.jpeg" },
+  { image_source: "/slides/slide.003.jpeg" },
+  { image_source: "/slides/slide.004.jpeg" },
+  { image_source: "/slides/slide.005.jpeg" },
+  { image_source: "/slides/slide.006.jpeg" },
+  { image_source: "/slides/slide.007.jpeg" },
+  { image_source: "/slides/slide.008.jpeg" },
+  { image_source: "/slides/slide.009.jpeg" },
 ];
 
 function App() {
