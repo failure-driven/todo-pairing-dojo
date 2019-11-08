@@ -19,6 +19,10 @@ const whiteboardData = [
   { image_source: "/slides/slide.009.jpeg" },
 ];
 
+const specials = [
+  { image_source: "/slides/background/03_fresho_build_punishment.gif" },
+];
+
 const backgroundData = [
   {
     image_source:
@@ -88,6 +92,12 @@ function App() {
     if (["1", "2", "3", "4", "5"].includes(text)) {
       setSlideshowData(backgroundData);
       setSlideshowIndex(parseInt(text, 10) - 1);
+      setShowSlideshow(true);
+      setItems([]);
+    }
+    if (text === "99") {
+      setSlideshowData(specials);
+      setSlideshowIndex(0);
       setShowSlideshow(true);
       setItems([]);
     }
