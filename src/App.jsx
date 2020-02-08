@@ -121,6 +121,10 @@ function App() {
         setShowFinal(true);
         setTitle("10x - pair programming");
       }
+    } else if (text === "m") {
+      setTitle("Rockstar");
+      var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
+      audio.play();
     } else if (text === "e") {
       setShowFinal(false);
       setTitle("Todo - pairing dojo");

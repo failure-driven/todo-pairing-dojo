@@ -5,7 +5,11 @@ export default function Slideshow({ hideSlideshow, index, data }) {
   const [slideIndex, setSlideIndex] = useState(index);
 
   const handleKeyPress = event => {
-    if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+    if (
+      event.key === "ArrowRight" ||
+      event.key === "ArrowLeft" ||
+      event.key === "ArrowDown"
+    ) {
       let localIndex = slideIndex;
       if (event.key === "ArrowRight") {
         localIndex = slideIndex + 1;
@@ -19,7 +23,18 @@ export default function Slideshow({ hideSlideshow, index, data }) {
           localIndex = data.length - 1;
         }
       }
+      if (event.key === "ArrowDown" && slideIndex === 3) {
+        var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
+        audio.play();
+      }
       setSlideIndex(localIndex);
+    } else if (
+      event.key === "Control" ||
+      event.key === "Alt" ||
+      event.key === "Meta" ||
+      event.key === "Shift"
+    ) {
+      return;
     } else {
       hideSlideshow();
     }
