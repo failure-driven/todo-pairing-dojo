@@ -1,8 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
-import { func, number, array } from "prop-types";
+import { func, number, array, string } from "prop-types";
 
-export default function Slideshow({ hideSlideshow, index, data }) {
+const SlideShowImage = ({ src, alt }) => <img src={src} alt={alt} />;
+
+SlideShowImage.propTypes = {
+  src: string,
+  alt: string
+};
+
+export default function Slideshow({ hideSlideshow, index, data, extraData }) {
   const [slideIndex, setSlideIndex] = useState(index);
+  const [extraIndex, setExtraIndex] = useState(0);
+  const [imageSrc, setImageSrc] = useState(data[slideIndex].image_source);
 
   const handleKeyPress = event => {
     if (
@@ -23,11 +32,28 @@ export default function Slideshow({ hideSlideshow, index, data }) {
           localIndex = data.length - 1;
         }
       }
-      if (event.key === "ArrowDown" && slideIndex === 3) {
-        var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
-        audio.play();
-      }
       setSlideIndex(localIndex);
+      setImageSrc(data[localIndex].image_source);
+      if (event.key === "ArrowDown") {
+        if (
+          extraData[slideIndex] &&
+          extraData[slideIndex][extraIndex] &&
+          extraData[slideIndex][extraIndex]
+        ) {
+          if (extraData[slideIndex][extraIndex].action) {
+            extraData[slideIndex][extraIndex].action("play");
+          } else if (extraData[slideIndex][extraIndex].image_source) {
+            setImageSrc(extraData[slideIndex][extraIndex].image_source);
+          } else {
+            setImageSrc(data[slideIndex].image_source);
+            setExtraIndex(0);
+          }
+          setExtraIndex(extraIndex + 1);
+        } else {
+          setImageSrc(data[slideIndex].image_source);
+          setExtraIndex(0);
+        }
+      }
     } else if (
       event.key === "Control" ||
       event.key === "Alt" ||
@@ -65,10 +91,7 @@ export default function Slideshow({ hideSlideshow, index, data }) {
       tabIndex='0'
     >
       <main>
-        <img
-          src={data[slideIndex].image_source}
-          alt={`slide ${slideIndex}`}
-        />
+        <SlideShowImage src={imageSrc} alt={`slide ${slideIndex}`} />
       </main>
     </div>
   );
@@ -77,10 +100,12 @@ export default function Slideshow({ hideSlideshow, index, data }) {
 Slideshow.propTypes = {
   hideSlideshow: func,
   data: array.isRequired,
-  index: number,
+  extraData: array,
+  index: number
 };
 
 Slideshow.defaultProps = {
   hideSlideshow: () => {},
   index: 0,
+  extraData: []
 };

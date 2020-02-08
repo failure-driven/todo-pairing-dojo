@@ -65,7 +65,30 @@ const backgroundData = [
   { image_source: "/slides/slide.006.jpeg" },
   { image_source: "/slides/slide.007.jpeg" },
   { image_source: "/slides/slide.008.jpeg" },
-  { image_source: "/slides/slide.009.jpeg" },
+  { image_source: "/slides/slide.009.jpeg" }
+];
+
+var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
+
+const extraData = [
+  null,
+  null,
+  null,
+  [
+    { image_source: "/slides/background/03_selena_drops_liz.gif" },
+    { image_source: "/slides/background/03_michael_run_smooth.gif" },
+    {
+      action: action => {
+        if (action === "play") {
+          audio.play();
+        }
+        if (action === "stop") {
+          audio.pause();
+          audio.load();
+        }
+      }
+    }
+  ]
 ];
 
 function App() {
@@ -123,8 +146,10 @@ function App() {
       }
     } else if (text === "m") {
       setTitle("Rockstar");
-      var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
-      audio.play();
+      extraData[3][2].action("play");
+    } else if (text === "s") {
+      setTitle("Todo - pairing dojo");
+      extraData[3][2].action("stop");
     } else if (text === "e") {
       setShowFinal(false);
       setTitle("Todo - pairing dojo");
@@ -174,6 +199,7 @@ function App() {
         }}
         data={slideshowData}
         index={slideshowIndex}
+        extraData={extraData}
       />
     );
 
