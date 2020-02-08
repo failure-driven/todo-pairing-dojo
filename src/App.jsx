@@ -25,6 +25,9 @@ const specials = [
 
 const backgroundData = [
   {
+    image_source: "/slides/background/00_ss-mm-rubyconfau-2020.jpg",
+  },
+  {
     image_source:
       "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
     credit: "Photo by Austin Distel on Unsplash",
@@ -89,7 +92,7 @@ function App() {
       setShowSlideshow(true);
       setItems([]);
     }
-    if (["1", "2", "3", "4", "5"].includes(text)) {
+    if (["1", "2", "3", "4", "5", "6"].includes(text)) {
       setSlideshowData(backgroundData);
       setSlideshowIndex(parseInt(text, 10) - 1);
       setShowSlideshow(true);
