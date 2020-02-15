@@ -23,7 +23,11 @@ const whiteboardData = [
   { src: "/slides/slide.009.jpeg" },
 ];
 
-const specials = [{ src: "/slides/background/03_fresho_build_punishment.gif" }];
+const specials = [
+  { src: "/slides/background/03_selena_elsa_highlight.gif" },
+  { src: "/slides/background/03_selena_drops_liz.gif" },
+  { src: "/slides/background/03_fresho_build_punishment.gif" },
+];
 
 const backgroundData = [
   {
