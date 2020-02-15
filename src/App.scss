@@ -6,14 +6,14 @@ $highlight: #4c4da8;
 $background-color: #161418;
 
 .todo {
-  min-width: 230px;
-  max-width: 800px;
+  min-width: 172px;
+  max-width: 600px;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
 
   h1 {
     text-align: center;
-    font-size: 60px;
+    font-size: 45px;
     color: $text-color-1;
     margin-bottom: 0.1em;
   }
@@ -21,19 +21,19 @@ $background-color: #161418;
   h3 {
     text-align: center;
     color: $text-color-2;
-    font-size: 24px;
+    font-size: 18;
   }
 
   input {
     z-index: 100;
     position: relative;
     margin: 0;
-    margin-bottom: 1.75em;
+    margin-bottom: 1.3em;
     width: 100%;
-    font-size: 36px;
+    font-size: 27px;
     font-family: inherit;
     font-weight: inherit;
-    line-height: 2em;
+    line-height: 1.5em;
     border: 0;
     outline: none;
     color: $text-color-1;
@@ -80,12 +80,12 @@ $background-color: #161418;
       /* Create a custom checkbox */
       .checkmark {
         position: absolute;
-        top: 25px;
-        left: 0;
-        height: 30px;
-        width: 30px;
+        top: 15px;
+        left: 7px;
+        height: 22px;
+        width: 22px;
         background-color: #eee;
-        margin-left: 30px;
+        margin-left: 22px;
       }
 
       /* On mouse-over, add a grey background color */
@@ -98,8 +98,8 @@ $background-color: #161418;
         display: none;
         content: "";
         position: absolute;
-        left: 9px;
-        top: 5px;
+        left: 6px;
+        top: 2px;
         width: 5px;
         height: 10px;
         border: solid $check-green;
@@ -113,10 +113,10 @@ $background-color: #161418;
       }
 
       span {
-        font-size: 36px;
-        line-height: 2em;
+        font-size: 27px;
+        line-height: 1.5em;
         color: $text-color-1;
-        margin-left: 68px;
+        margin-left: 60px;
       }
 
       &.completed {
@@ -128,13 +128,13 @@ $background-color: #161418;
       button {
         display: none;
         position: absolute;
-        top: 25px;
+        top: 15px;
         right: 10px;
-        width: 30px;
-        height: 30px;
+        width: 22px;
+        height: 22px;
         font-weight: 900;
         margin: auto 0;
-        font-size: 30px;
+        font-size: 22px;
         color: #cc9a9a;
         margin-bottom: 11px;
         transition: color 0.2s ease-out;
@@ -147,7 +147,7 @@ $background-color: #161418;
           content: "×";
           top: -5px;
           position: absolute;
-          left: 4px;
+          left: 3px;
         }
       }
 
@@ -169,7 +169,7 @@ $background-color: #161418;
     background-image: url(/header_selena_michael_opacity.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1650px;
+    background-size: 1280px;
   }
 }
 
@@ -187,7 +187,7 @@ $background-color: #161418;
   }
   h1 {
     text-align: center;
-    font-size: 60px;
+    font-size: 45px;
     color: $text-color-1;
     margin-bottom: 0.1em;
   }
