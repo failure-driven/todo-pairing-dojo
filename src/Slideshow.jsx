@@ -1,17 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import { func, number, array, string } from "prop-types";
 
-const SlideShowImage = ({ src, alt }) => <img src={src} alt={alt} />;
+const SlideShowImage = ({ imageData: { src, alt, style } }) => (
+  <img src={src} alt={alt} style={style} />
+);
 
 SlideShowImage.propTypes = {
-  src: string,
-  alt: string
+  imageData: {
+    str: string,
+    style: string,
+  },
 };
 
 export default function Slideshow({ hideSlideshow, index, data, extraData }) {
   const [slideIndex, setSlideIndex] = useState(index);
   const [extraIndex, setExtraIndex] = useState(0);
-  const [imageSrc, setImageSrc] = useState(data[slideIndex].image_source);
+  const [imageData, setImageData] = useState(data[slideIndex]);
 
   const handleKeyPress = event => {
     if (
@@ -33,7 +37,7 @@ export default function Slideshow({ hideSlideshow, index, data, extraData }) {
         }
       }
       setSlideIndex(localIndex);
-      setImageSrc(data[localIndex].image_source);
+      setImageData(data[localIndex]);
       if (event.key === "ArrowDown") {
         if (
           extraData[slideIndex] &&
@@ -42,15 +46,15 @@ export default function Slideshow({ hideSlideshow, index, data, extraData }) {
         ) {
           if (extraData[slideIndex][extraIndex].action) {
             extraData[slideIndex][extraIndex].action("play");
-          } else if (extraData[slideIndex][extraIndex].image_source) {
-            setImageSrc(extraData[slideIndex][extraIndex].image_source);
+          } else if (extraData[slideIndex][extraIndex]) {
+            setImageData(extraData[slideIndex][extraIndex]);
           } else {
-            setImageSrc(data[slideIndex].image_source);
+            setImageData(data[slideIndex]);
             setExtraIndex(0);
           }
           setExtraIndex(extraIndex + 1);
         } else {
-          setImageSrc(data[slideIndex].image_source);
+          setImageData(data[slideIndex]);
           setExtraIndex(0);
         }
       }
@@ -84,14 +88,14 @@ export default function Slideshow({ hideSlideshow, index, data, extraData }) {
   return (
     <div
       ref={inputRef}
-      className='whiteboard'
+      className="whiteboard"
       onKeyDown={handleKeyPress}
       onClick={handleClick}
       autoFocus
-      tabIndex='0'
+      tabIndex="0"
     >
       <main>
-        <SlideShowImage src={imageSrc} alt={`slide ${slideIndex}`} />
+        <SlideShowImage imageData={imageData} alt={`slide ${slideIndex}`} />
       </main>
     </div>
   );
@@ -101,11 +105,11 @@ Slideshow.propTypes = {
   hideSlideshow: func,
   data: array.isRequired,
   extraData: array,
-  index: number
+  index: number,
 };
 
 Slideshow.defaultProps = {
   hideSlideshow: () => {},
   index: 0,
-  extraData: []
+  extraData: [],
 };

@@ -5,67 +5,64 @@ import Form from "./Form";
 import List from "./List";
 import Slideshow from "./Slideshow";
 
-const Final = () => <div className='final'></div>;
+const Final = () => <div className="final"></div>;
 
 const whiteboardData = [
-  { image_source: "/slides/slide.001.jpeg" },
-  { image_source: "/slides/slide.002.jpeg" },
-  { image_source: "/slides/slide.003.jpeg" },
-  { image_source: "/slides/slide.004.jpeg" },
-  { image_source: "/slides/slide.005.jpeg" },
-  { image_source: "/slides/slide.006.jpeg" },
-  { image_source: "/slides/slide.007.jpeg" },
-  { image_source: "/slides/slide.008.jpeg" },
-  { image_source: "/slides/slide.009.jpeg" },
+  { src: "/slides/slide.001.jpeg" },
+  { src: "/slides/slide.002.jpeg" },
+  { src: "/slides/slide.003.jpeg" },
+  { src: "/slides/slide.004.jpeg" },
+  { src: "/slides/slide.005.jpeg" },
+  { src: "/slides/slide.006.jpeg" },
+  { src: "/slides/slide.007.jpeg" },
+  { src: "/slides/slide.008.jpeg" },
+  { src: "/slides/slide.009.jpeg" },
 ];
 
-const specials = [
-  { image_source: "/slides/background/03_fresho_build_punishment.gif" },
-];
+const specials = [{ src: "/slides/background/03_fresho_build_punishment.gif" }];
 
 const backgroundData = [
   {
-    image_source: "/slides/background/00_ss-mm-rubyconfau-2020.jpg",
+    src: "/slides/background/00_ss-mm-rubyconfau-2020.jpg",
+    style: { width: "1280px", height: "720px" },
+    // src: "/slides/background/00_ss-mm-reactconfau-2020.jpg",
+    // style: { width: "1280px", height: "640px" },
   },
   {
-    image_source:
-      "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
+    src: "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
     credit: "Photo by Austin Distel on Unsplash",
     credit_url: "https://unsplash.com/photos/wawEfYdpkag",
   },
   {
-    image_source:
-      "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
+    src: "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
     credit: "Photo by Nathan Dumlao on Unsplash",
     credit_url: "https://unsplash.com/photos/6VhPY27jdps",
   },
   {
-    image_source: "/slides/background/03_michael_run_smooth.gif",
+    src: "/slides/background/03_michael_run_smooth.gif",
     credit: "Selena & Michael",
     credit_url: "https://failure-driven.com",
   },
   {
-    image_source:
-      "/slides/background/04_john-fornander-C56oCEdK14c-unsplash.jpg",
+    src: "/slides/background/04_john-fornander-C56oCEdK14c-unsplash.jpg",
     credit: "Photo by John Fornander on Unsplash",
     credit_url: "https://unsplash.com/photos/C56oCEdK14c",
   },
 
   {
-    image_source:
-      "/slides/background/05_brooke-lark-pGM4sjt_BdQ-unsplash.jpg",
+    src: "/slides/background/05_brooke-lark-pGM4sjt_BdQ-unsplash.jpg",
     credit: "Photo by Brooke Lark on Unsplash",
     credit_url: "https://unsplash.com/photos/pGM4sjt_BdQ",
   },
-  { image_source: "/slides/slide.001.jpeg" },
-  { image_source: "/slides/slide.002.jpeg" },
-  { image_source: "/slides/slide.003.jpeg" },
-  { image_source: "/slides/slide.004.jpeg" },
-  { image_source: "/slides/slide.005.jpeg" },
-  { image_source: "/slides/slide.006.jpeg" },
-  { image_source: "/slides/slide.007.jpeg" },
-  { image_source: "/slides/slide.008.jpeg" },
-  { image_source: "/slides/slide.009.jpeg" }
+  { src: "/slides/slide.001.jpeg" },
+  { src: "/slides/slide.002.jpeg" },
+  { src: "/slides/slide.003.jpeg" },
+  { src: "/slides/slide.004.jpeg" },
+  { src: "/slides/slide.005.jpeg" },
+  { src: "/slides/slide.006.jpeg" },
+  { src: "/slides/slide.007.jpeg" },
+  { src: "/slides/slide.008.jpeg" },
+  { src: "/slides/slide.009.jpeg" },
 ];
 
 var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
@@ -75,8 +72,8 @@ const extraData = [
   null,
   null,
   [
-    { image_source: "/slides/background/03_selena_drops_liz.gif" },
-    { image_source: "/slides/background/03_michael_run_smooth.gif" },
+    { src: "/slides/background/03_selena_drops_liz.gif" },
+    { src: "/slides/background/03_michael_run_smooth.gif" },
     {
       action: action => {
         if (action === "play") {
@@ -86,9 +83,9 @@ const extraData = [
           audio.pause();
           audio.load();
         }
-      }
-    }
-  ]
+      },
+    },
+  ],
 ];
 
 function App() {
@@ -164,7 +161,7 @@ function App() {
           "4 - Plan",
           "5 - Work",
           "6 - Mini retros",
-        ].map((text, index) => createItem(text, index + 1))
+        ].map((text, index) => createItem(text, index + 1)),
       );
     } else if (text === "cl" || text === "q") {
       setEndState(false);
@@ -183,7 +180,7 @@ function App() {
 
   const toggleComplete = id => {
     setItems(
-      items.map(item => (item.id === id ? toggleIsComplete(item) : item))
+      items.map(item => (item.id === id ? toggleIsComplete(item) : item)),
     );
   };
 
@@ -204,7 +201,7 @@ function App() {
     );
 
   return (
-    <div className='todo'>
+    <div className="todo">
       <h1>{title}</h1>
       <Form addItem={addItem} />
       <List

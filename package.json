@@ -44,5 +44,9 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
+  },
+  "prettier": {
+    "singleQuote": false,
+    "trailingComma": "all"
   }
 }
