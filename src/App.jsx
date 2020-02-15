@@ -73,6 +73,7 @@ const extraData = [
   null,
   [
     { src: "/slides/background/03_selena_drops_liz.gif" },
+    // { src: "/slides/background/03_selena_elsa_highlight.gif" },
     { src: "/slides/background/03_michael_run_smooth.gif" },
     {
       action: action => {
