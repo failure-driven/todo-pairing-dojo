@@ -170,7 +170,19 @@ $background-color: #161418;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1280px;
+
+    #fresho-logo {
+      visibility: visible;
+      position: absolute;
+      margin-left: 41vw;
+      width: 18vw;
+      top: 70vh;
+    }
   }
+}
+
+#fresho-logo {
+  visibility: hidden;
 }
 
 .whiteboard {

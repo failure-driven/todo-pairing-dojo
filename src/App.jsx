@@ -5,7 +5,11 @@ import Form from "./Form";
 import List from "./List";
 import Slideshow from "./Slideshow";
 
-const Final = () => <div className="final"></div>;
+const Final = () => (
+  <div className="final">
+    <img src="fresho_logo.png" id="fresho-logo" />
+  </div>
+);
 
 const whiteboardData = [
   { src: "/slides/slide.001.jpeg" },
