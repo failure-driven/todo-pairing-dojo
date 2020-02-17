@@ -76,13 +76,30 @@ const backgroundData = [
 var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
 
 const extraData = [
-  null,
+  [
+    {
+      src: "/slides/background/00_01_ss-mm-reactconfau-2020.jpg",
+      style: { width: "1280px", height: "720px" },
+    },
+    {
+      src: "/slides/background/00_02_ss-mm-reactconfau-2020.jpg",
+      style: { width: "1280px", height: "720px" },
+    },
+    {
+      src: "/slides/background/00_03_ss-mm-reactconfau-2020.jpg",
+      style: { width: "1280px", height: "720px" },
+    },
+    {
+      src: "/slides/background/00_04_ss-mm-reactconfau-2020.jpg",
+      style: { width: "1280px", height: "720px" },
+    },
+    {
+      src: "/slides/background/00_05_ss-mm-reactconfau-2020.jpg",
+    },
+  ],
   null,
   null,
   [
-    { src: "/slides/background/03_selena_drops_liz.gif" },
-    // { src: "/slides/background/03_selena_elsa_highlight.gif" },
-    { src: "/slides/background/03_michael_run_smooth.gif" },
     {
       action: action => {
         if (action === "play") {
@@ -94,6 +111,8 @@ const extraData = [
         }
       },
     },
+    { src: "/slides/background/03_selena_drops_liz.gif" },
+    // { src: "/slides/background/03_selena_elsa_highlight.gif" },
   ],
 ];
 
@@ -152,10 +171,10 @@ function App() {
       }
     } else if (text === "m") {
       setTitle("Rockstar");
-      extraData[3][2].action("play");
+      extraData[3][0].action("play");
     } else if (text === "s") {
       setTitle("Todo - pairing dojo");
-      extraData[3][2].action("stop");
+      extraData[3][0].action("stop");
     } else if (text === "e") {
       setShowFinal(false);
       setTitle("Todo - pairing dojo");
