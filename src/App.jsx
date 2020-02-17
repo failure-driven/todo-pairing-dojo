@@ -39,7 +39,7 @@ const backgroundData = [
   {
     src: "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
     credit: "Photo by Austin Distel on Unsplash",
-    credit_url: "https://unsplash.com/photos/wawEfYdpkag",
+    creditUrl: "https://unsplash.com/photos/wawEfYdpkag",
   },
   {
     src:
@@ -48,23 +48,21 @@ const backgroundData = [
   {
     src: "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
     credit: "Photo by Nathan Dumlao on Unsplash",
-    credit_url: "https://unsplash.com/photos/6VhPY27jdps",
+    creditUrl: "https://unsplash.com/photos/6VhPY27jdps",
   },
   {
     src: "/slides/background/03_michael_run_smooth.gif",
-    credit: "Selena & Michael",
-    credit_url: "https://failure-driven.com",
   },
   {
     src: "/slides/background/04_john-fornander-C56oCEdK14c-unsplash.jpg",
     credit: "Photo by John Fornander on Unsplash",
-    credit_url: "https://unsplash.com/photos/C56oCEdK14c",
+    creditUrl: "https://unsplash.com/photos/C56oCEdK14c",
   },
 
   {
     src: "/slides/background/05_brooke-lark-pGM4sjt_BdQ-unsplash.jpg",
     credit: "Photo by Brooke Lark on Unsplash",
-    credit_url: "https://unsplash.com/photos/pGM4sjt_BdQ",
+    creditUrl: "https://unsplash.com/photos/pGM4sjt_BdQ",
   },
   {
     src:
