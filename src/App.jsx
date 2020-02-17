@@ -161,7 +161,7 @@ function App() {
       setShowSlideshow(true);
       setItems([]);
     }
-    if (["1", "2", "3", "4", "5", "6"].includes(text)) {
+    if (["1", "2", "3", "4", "5", "6", "7", "8"].includes(text)) {
       setSlideshowData(backgroundData);
       setSlideshowIndex(parseInt(text, 10) - 1);
       setShowSlideshow(true);
