@@ -83,6 +83,11 @@ const backgroundData = [
 
 var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
 
+const onTheDay = () =>
+  new Date().getTime() > new Date("20 Feb 2020 16:00:00 GMT+1100").getTime()
+    ? "/slides/background/03_selena_elsa_highlight.gif"
+    : "/slides/background/03_selena_drops_liz.gif";
+
 const extraData = [
   [
     {
@@ -120,8 +125,7 @@ const extraData = [
         }
       },
     },
-    { src: "/slides/background/03_selena_drops_liz.gif" },
-    // { src: "/slides/background/03_selena_elsa_highlight.gif" },
+    { src: onTheDay() },
   ],
 ];
 
