@@ -7,7 +7,7 @@ import Slideshow from "./Slideshow";
 
 const Final = () => (
   <div className="final">
-    <img src="fresho_logo.png" id="fresho-logo" />
+    <img src="fresho_logo.png" alt="fresho logo" id="fresho-logo" />
   </div>
 );
 
