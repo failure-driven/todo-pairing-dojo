@@ -42,6 +42,10 @@ const backgroundData = [
     credit_url: "https://unsplash.com/photos/wawEfYdpkag",
   },
   {
+    src:
+      "http://s3-ap-southeast-2.amazonaws.com/failure-driven-blog/railscamp-24-woodfield-hobart/commit_03_edward_0f515e5ecc3.gif",
+  },
+  {
     src: "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
     credit: "Photo by Nathan Dumlao on Unsplash",
     credit_url: "https://unsplash.com/photos/6VhPY27jdps",
@@ -61,6 +65,10 @@ const backgroundData = [
     src: "/slides/background/05_brooke-lark-pGM4sjt_BdQ-unsplash.jpg",
     credit: "Photo by Brooke Lark on Unsplash",
     credit_url: "https://unsplash.com/photos/pGM4sjt_BdQ",
+  },
+  {
+    src:
+      "http://s3-ap-southeast-2.amazonaws.com/failure-driven-blog/railscamp-24-woodfield-hobart/commit_06_emily_coats_74791c0fa7e.gif",
   },
   { src: "/slides/slide.001.jpeg" },
   { src: "/slides/slide.002.jpeg" },
@@ -97,6 +105,7 @@ const extraData = [
       src: "/slides/background/00_05_ss-mm-reactconfau-2020.jpg",
     },
   ],
+  null,
   null,
   null,
   [
@@ -171,10 +180,10 @@ function App() {
       }
     } else if (text === "m") {
       setTitle("Rockstar");
-      extraData[3][0].action("play");
+      extraData[4][0].action("play");
     } else if (text === "s") {
       setTitle("Todo - pairing dojo");
-      extraData[3][0].action("stop");
+      extraData[4][0].action("stop");
     } else if (text === "e") {
       setShowFinal(false);
       setTitle("Todo - pairing dojo");
