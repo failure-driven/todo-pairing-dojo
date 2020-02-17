@@ -1,15 +1,32 @@
 import React, { useState, useEffect, useRef } from "react";
-import { func, number, array, string } from "prop-types";
+import { func, number, array, shape, string } from "prop-types";
 
-const SlideShowImage = ({ imageData: { src, alt, style } }) => (
-  <img src={src} alt={alt} style={style} />
+const SlideShowImage = ({
+  imageData: { src, alt, style, credit, creditUrl },
+}) => (
+  <>
+    <img src={src} alt={alt} style={style} />
+    {credit && creditUrl && (
+      <div className="credits">
+        <p>{credit}</p>
+        <p>
+          <a href={creditUrl} alt="credit link">
+            {creditUrl}
+          </a>
+        </p>
+      </div>
+    )}
+  </>
 );
 
 SlideShowImage.propTypes = {
-  imageData: {
+  imageData: shape({
     str: string,
     style: string,
-  },
+    alt: string,
+    credit: string,
+    creditUrl: string,
+  }),
 };
 
 export default function Slideshow({ hideSlideshow, index, data, extraData }) {
