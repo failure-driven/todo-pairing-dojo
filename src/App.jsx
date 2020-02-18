@@ -84,12 +84,12 @@ const backgroundData = [
 var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
 
 const onTheDay1 = () =>
-  new Date().getTime() > new Date("20 Feb 2020 16:00:00 GMT+1100").getTime()
+  new Date().getTime() > new Date("20 Feb 2020 15:50:00 GMT+1100").getTime()
     ? "/slides/background/03_selena_elsa.gif"
     : "/slides/background/03_selena_drops_liz.gif";
 
 const onTheDay2 = () =>
-  new Date().getTime() > new Date("20 Feb 2020 16:00:00 GMT+1100").getTime()
+  new Date().getTime() > new Date("20 Feb 2020 15:50:00 GMT+1100").getTime()
     ? "/slides/background/03_selena_elsa_win.gif"
     : "/slides/background/03_enter_the_ring.gif";
 
