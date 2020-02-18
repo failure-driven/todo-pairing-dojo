@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { func, number, array, shape, string } from "prop-types";
+import { any, func, number, array, shape, string } from "prop-types";
 
 const SlideShowImage = ({
   imageData: { src, alt, style, credit, creditUrl },
@@ -22,7 +22,7 @@ const SlideShowImage = ({
 SlideShowImage.propTypes = {
   imageData: shape({
     str: string,
-    style: string,
+    style: any,
     alt: string,
     credit: string,
     creditUrl: string,
