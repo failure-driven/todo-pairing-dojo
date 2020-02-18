@@ -44,6 +44,7 @@ const backgroundData = [
     creditUrl: "https://unsplash.com/photos/wawEfYdpkag",
   },
   {
+    // BAD lolcommit goes here
     src:
       "http://s3-ap-southeast-2.amazonaws.com/failure-driven-blog/railscamp-24-woodfield-hobart/commit_03_edward_0f515e5ecc3.gif",
   },
@@ -66,10 +67,6 @@ const backgroundData = [
     credit: "Photo by Brooke Lark on Unsplash",
     creditUrl: "https://unsplash.com/photos/pGM4sjt_BdQ",
   },
-  {
-    src:
-      "http://s3-ap-southeast-2.amazonaws.com/failure-driven-blog/railscamp-24-woodfield-hobart/commit_06_emily_coats_74791c0fa7e.gif",
-  },
   { src: "/slides/slide.001.jpeg" },
   { src: "/slides/slide.002.jpeg" },
   { src: "/slides/slide.003.jpeg" },
@@ -79,9 +76,15 @@ const backgroundData = [
   { src: "/slides/slide.007.jpeg" },
   { src: "/slides/slide.008.jpeg" },
   { src: "/slides/slide.009.jpeg" },
+  {
+    // GOOD lolcommit goes here
+    src:
+      "http://s3-ap-southeast-2.amazonaws.com/failure-driven-blog/railscamp-24-woodfield-hobart/commit_06_emily_coats_74791c0fa7e.gif",
+  },
 ];
 
-var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
+// var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
+var audio = new Audio("/audio/rockstar_22_sec_edit.mp3");
 
 const onTheDay1 = () =>
   new Date().getTime() > new Date("20 Feb 2020 15:50:00 GMT+1100").getTime()
@@ -143,8 +146,16 @@ const extraData = [
         }
       },
     },
-    { src: onTheDay1() },
   ],
+  null,
+  [{ src: onTheDay1() }],
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
   null,
   null,
   [{ src: onTheDay2() }],
