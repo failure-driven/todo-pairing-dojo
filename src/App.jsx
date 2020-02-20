@@ -45,7 +45,7 @@ const backgroundData = [
   },
   {
     // BAD lolcommit goes here
-    src: "/slides/background/00_thats_how_you_pair.gif"
+    src: "/slides/background/00_thats_how_you_pair.gif",
   },
   {
     src: "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
@@ -100,27 +100,27 @@ const onTheDay2 = () =>
 const extraData = [
   [
     {
-      src: "/slides/background/00_01_ss-mm-reactconfau-2020.jpg",
+      src: "/slides/background/00_01_ss-mm-rubyconfau-2020.jpg",
       style: { width: "1280px", height: "720px" },
     },
     {
-      src: "/slides/background/00_02_ss-mm-reactconfau-2020.jpg",
+      src: "/slides/background/00_02_ss-mm-rubyconfau-2020.jpg",
       style: { width: "1280px", height: "720px" },
     },
     {
-      src: "/slides/background/00_03_ss-mm-reactconfau-2020.jpg",
+      src: "/slides/background/00_03_ss-mm-rubyconfau-2020.jpg",
       style: { width: "1280px", height: "720px" },
     },
     {
-      src: "/slides/background/00_04_ss-mm-reactconfau-2020.jpg",
+      src: "/slides/background/00_04_ss-mm-rubyconfau-2020.jpg",
       style: { width: "1280px", height: "720px" },
     },
     {
-      src: "/slides/background/00_05_a_ss-mm-reactconfau-2020.jpg",
+      src: "/slides/background/00_05_a_ss-mm-rubyconfau-2020.jpg",
       style: { width: "1280px", height: "720px" },
     },
     {
-      src: "/slides/background/00_05_b_ss-mm-reactconfau-2020.jpg",
+      src: "/slides/background/00_05_b_ss-mm-rubyconfau-2020.jpg",
       style: { width: "1280px", height: "720px" },
     },
   ],
