@@ -115,19 +115,11 @@ const extraData = [
       style: { width: "1280px", height: "720px" },
     },
     {
-      src: "/slides/background/00_05_ss-mm-reactconfau-2020.jpg",
+      src: "/slides/background/00_05_a_ss-mm-reactconfau-2020.jpg",
       style: { width: "1280px", height: "720px" },
     },
     {
-      src: "/slides/background/00_06_ss-mm-reactconfau-2020.jpg",
-      style: { width: "1280px", height: "720px" },
-    },
-    {
-      src: "/slides/background/00_07_ss-mm-reactconfau-2020.jpg",
-      style: { width: "1280px", height: "720px" },
-    },
-    {
-      src: "/slides/background/00_08_ss-mm-reactconfau-2020.jpg",
+      src: "/slides/background/00_05_b_ss-mm-reactconfau-2020.jpg",
       style: { width: "1280px", height: "720px" },
     },
   ],
