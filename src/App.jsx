@@ -45,8 +45,7 @@ const backgroundData = [
   },
   {
     // BAD lolcommit goes here
-    src:
-      "http://s3-ap-southeast-2.amazonaws.com/failure-driven-blog/railscamp-24-woodfield-hobart/commit_03_edward_0f515e5ecc3.gif",
+    src: "/slides/background/00_thats_how_you_pair.gif"
   },
   {
     src: "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
@@ -80,8 +79,7 @@ const backgroundData = [
   { src: "/slides/slide.009.jpeg" },
   {
     // GOOD lolcommit goes here
-    src:
-      "http://s3-ap-southeast-2.amazonaws.com/failure-driven-blog/railscamp-24-woodfield-hobart/commit_06_emily_coats_74791c0fa7e.gif",
+    src: "/slides/background/00_success_winning.gif",
   },
 ];
 
