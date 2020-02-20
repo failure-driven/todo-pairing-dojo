@@ -55,6 +55,8 @@ const backgroundData = [
   },
   {
     src: "/slides/background/03_melbourne_run.gif",
+    credit: "Music: www.bensound.com",
+    creditUrl: "http://www.bensound.com",
   },
   {
     src: "/slides/background/04_john-fornander-C56oCEdK14c-unsplash.jpg",
@@ -84,7 +86,8 @@ const backgroundData = [
 ];
 
 // var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
-var audio = new Audio("/audio/rockstar_22_sec_edit.mp3");
+// var audio = new Audio("/audio/rockstar_22_sec_edit.mp3");
+var audio = new Audio("/audio/bensound-extremeaction.mp3");
 
 const onTheDay1 = () =>
   new Date().getTime() > new Date("20 Feb 2020 15:50:00 GMT+1100").getTime()
