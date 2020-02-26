@@ -43,10 +43,10 @@ const backgroundData = [
     credit: "Photo by Austin Distel on Unsplash",
     creditUrl: "https://unsplash.com/photos/wawEfYdpkag",
   },
-  {
-    // BAD lolcommit goes here
-    src: "/slides/background/00_thats_how_you_pair.gif",
-  },
+  // {
+  //   // BAD lolcommit goes here
+  //   src: "/slides/background/00_thats_how_you_pair.gif",
+  // },
   {
     src: "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
     credit: "Photo by Nathan Dumlao on Unsplash",
@@ -78,9 +78,13 @@ const backgroundData = [
   { src: "/slides/slide.007.jpeg" },
   { src: "/slides/slide.008.jpeg" },
   { src: "/slides/slide.009.jpeg" },
+  // {
+  //   // GOOD lolcommit goes here
+  //   src: "/slides/background/00_success_winning.gif",
+  // },
   {
-    // GOOD lolcommit goes here
-    src: "/slides/background/00_success_winning.gif",
+    src: "/slides/background/00_ss-mm-reactconfau-2020.jpg",
+    style: { width: "1280px", height: "640px" },
   },
 ];
 
@@ -125,7 +129,6 @@ const extraData = [
     //   style: { width: "1280px", height: "720px" },
     // },
   ],
-  null,
   null,
   null,
   [
@@ -210,10 +213,10 @@ function App() {
       }
     } else if (text === "m") {
       setTitle("Rockstar");
-      extraData[4][0].action("play");
+      extraData[3][0].action("play");
     } else if (text === "s") {
       setTitle("Todo - pairing dojo");
-      extraData[4][0].action("stop");
+      extraData[3][0].action("stop");
     } else if (text === "e") {
       setShowFinal(false);
       setTitle("Todo - pairing dojo");
