@@ -24,8 +24,9 @@ const whiteboardData = [
 ];
 
 const specials = [
-  { src: "/slides/background/03_selena_elsa.gif" },
   { src: "/slides/background/03_selena_elsa_win.gif" },
+  { src: "/slides/background/03_selena_elsa.gif" },
+  { src: "/slides/background/03_selena_elsa_fight_only.gif" },
   { src: "/slides/background/03_selena_elsa_highlight.gif" },
   { src: "/slides/background/03_selena_drops_liz.gif" },
   { src: "/slides/background/03_fresho_build_punishment.gif" },
@@ -94,7 +95,7 @@ var audio = new Audio("/audio/bensound-extremeaction.mp3");
 
 const onTheDay1 = () =>
   new Date().getTime() > new Date("20 Feb 2020 15:50:00 GMT+1100").getTime()
-    ? "/slides/background/03_selena_elsa.gif"
+    ? "/slides/background/03_selena_elsa_fight_only.gif"
     : "/slides/background/03_selena_drops_liz.gif";
 
 const onTheDay2 = () =>
