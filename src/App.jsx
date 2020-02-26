@@ -53,7 +53,8 @@ const backgroundData = [
     creditUrl: "https://unsplash.com/photos/6VhPY27jdps",
   },
   {
-    src: "/slides/background/03_melbourne_run.gif",
+    // src: "/slides/background/03_melbourne_run.gif",
+    src: "/slides/background/03_sydney_run.gif",
     credit: "Music: www.bensound.com",
     creditUrl: "http://www.bensound.com",
   },
