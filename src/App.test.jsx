@@ -1,8 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
 import App from "./App";
+import { v4 } from "uuid";
 
-jest.mock("uuid/v4");
+jest.mock('uuid', () => ({ v4: jest.fn() }))
 
 it("renders a title a form and a list", () => {
   const wrapper = shallow(<App />);
@@ -12,8 +13,7 @@ it("renders a title a form and a list", () => {
 });
 
 it("adds a todo item when addItem is called", () => {
-  const mockUuid = require("uuid/v4");
-  mockUuid.mockImplementationOnce(() => "123");
+  v4.mockImplementationOnce(() => "123");
 
   const wrapper = shallow(<App />);
   expect(wrapper.find("List").prop("items")).toEqual([]);
@@ -26,9 +26,8 @@ it("adds a todo item when addItem is called", () => {
 describe("when there are 2 items", () => {
   let wrapper = null;
   beforeEach(() => {
-    const mockUuid = require("uuid/v4");
-    mockUuid.mockImplementationOnce(() => "ABC");
-    mockUuid.mockImplementationOnce(() => "123");
+    v4.mockImplementationOnce(() => "ABC");
+    v4.mockImplementationOnce(() => "123");
 
     wrapper = shallow(<App />);
 
