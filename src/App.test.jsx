@@ -1,8 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
 import App from "./App";
+import { v4 } from "uuid";
 
-jest.mock("uuid/v4");
+jest.mock('uuid', () => ({ v4: jest.fn() }))
 
 it("renders a title a form and a list", () => {
   const wrapper = shallow(<App />);
@@ -12,8 +13,7 @@ it("renders a title a form and a list", () => {
 });
 
 it("adds a todo item when addItem is called", () => {
-  const mockUuid = require("uuid/v4");
-  mockUuid.mockImplementationOnce(() => "123");
+  v4.mockImplementationOnce(() => "123");
 
   const wrapper = shallow(<App />);
   expect(wrapper.find("List").prop("items")).toEqual([]);
@@ -26,9 +26,8 @@ it("adds a todo item when addItem is called", () => {
 describe("when there are 2 items", () => {
   let wrapper = null;
   beforeEach(() => {
-    const mockUuid = require("uuid/v4");
-    mockUuid.mockImplementationOnce(() => "123");
-    mockUuid.mockImplementationOnce(() => "ABC");
+    v4.mockImplementationOnce(() => "123");
+    v4.mockImplementationOnce(() => "ABC");
 
     wrapper = shallow(<App />);
 
@@ -54,12 +53,12 @@ describe("when there are 2 items", () => {
 
 describe("Special slide todos", () => {
   beforeEach(() => {
-    const mockUuid = require("uuid/v4");
-    mockUuid.mockImplementationOnce(() => "UUID_1");
-    mockUuid.mockImplementationOnce(() => "UUID_2");
-    mockUuid.mockImplementationOnce(() => "UUID_3");
-    mockUuid.mockImplementationOnce(() => "UUID_4");
-    mockUuid.mockImplementationOnce(() => "UUID_5");
+    v4.mockImplementationOnce(() => "UUID_1");
+    v4.mockImplementationOnce(() => "UUID_2");
+    v4.mockImplementationOnce(() => "UUID_3");
+    v4.mockImplementationOnce(() => "UUID_4");
+    v4.mockImplementationOnce(() => "UUID_5");
+    v4.mockImplementationOnce(() => "UUID_6");
   });
 
   it('shows the checklist when " check." is typed', () => {
@@ -82,19 +81,25 @@ describe("Special slide todos", () => {
         id: "UUID_3",
         ordinal: 3,
         isComplete: false,
-        text: "3 - Work",
+        text: "3 - Regular breaks",
       },
       {
         id: "UUID_4",
         ordinal: 4,
         isComplete: false,
-        text: "4 - Regular breaks",
+        text: "4 - Plan",
       },
       {
         id: "UUID_5",
         ordinal: 5,
         isComplete: false,
-        text: "5 - Mini retros",
+        text: "5 - Work",
+      },
+      {
+        id: "UUID_6",
+        ordinal: 6,
+        isComplete: false,
+        text: "6 - Mini retros",
       },
     ]);
   });
@@ -119,19 +124,25 @@ describe("Special slide todos", () => {
         id: "UUID_3",
         ordinal: 3,
         isComplete: false,
-        text: "3 - Work",
+        text: "3 - Regular breaks",
       },
       {
         id: "UUID_4",
         ordinal: 4,
         isComplete: false,
-        text: "4 - Regular breaks",
+        text: "4 - Plan",
       },
       {
         id: "UUID_5",
         ordinal: 5,
         isComplete: false,
-        text: "5 - Mini retros",
+        text: "5 - Work",
+      },
+      {
+        id: "UUID_6",
+        ordinal: 6,
+        isComplete: false,
+        text: "6 - Mini retros",
       },
     ]);
   });

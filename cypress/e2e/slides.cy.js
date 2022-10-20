@@ -20,15 +20,15 @@ describe("Slides for the pairing talk", () => {
     todo
       .getTodos()
       .eq(2)
-      .should("text", "3 - Work");
+      .should("text", "3 - Regular breaks");
     todo
       .getTodos()
       .eq(3)
-      .should("text", "4 - Regular breaks");
+      .should("text", "4 - Plan");
     todo
       .getTodos()
       .eq(4)
-      .should("text", "5 - Mini retros");
+      .should("text", "5 - Work");
   });
 
   it("shows the final slide", () => {
@@ -49,14 +49,14 @@ describe("Slides for the pairing talk", () => {
     todo
       .getTodos()
       .eq(2)
-      .should("text", "3 - Work");
+      .should("text", "3 - Regular breaks");
     todo
       .getTodos()
       .eq(3)
-      .should("text", "4 - Regular breaks");
+      .should("text", "4 - Plan");
     todo
       .getTodos()
       .eq(4)
-      .should("text", "5 - Mini retros");
+      .should("text", "5 - Work");
   });
 });

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import uuid from "uuid/v4";
+import { v4 as uuid } from "uuid";
 import "./App.scss";
 import Form from "./Form";
 import List from "./List";
@@ -90,8 +90,8 @@ const backgroundData = [
 ];
 
 // var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
-// var audio = new Audio("/audio/rockstar_22_sec_edit.mp3");
-var audio = new Audio("/audio/bensound-extremeaction.mp3");
+var audio = new Audio("/audio/rockstar_22_sec_edit.mp3");
+// var audio = new Audio("/audio/bensound-extremeaction.mp3");
 
 const onTheDay1 = () =>
   new Date().getTime() > new Date("20 Feb 2020 15:50:00 GMT+1100").getTime()
