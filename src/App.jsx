@@ -36,8 +36,10 @@ const backgroundData = [
   {
     // src: "/slides/background/00_ss-mm-rubyconfau-2020.jpg",
     // style: { width: "1280px", height: "720px" },
-    src: "/slides/background/00_ss-mm-reactconfau-2020.jpg",
-    style: { width: "1280px", height: "640px" },
+    // src: "/slides/background/00_ss-mm-reactconfau-2020.jpg",
+    // style: { width: "1280px", height: "640px" },
+    src: "/slides/background/00_ss-mm-rubyconfth-2022.jpg",
+    style: { width: "1000px", height: "1000px" },
   },
   {
     src: "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
@@ -56,6 +58,7 @@ const backgroundData = [
   {
     // src: "/slides/background/03_melbourne_run.gif",
     src: "/slides/background/03_sydney_run.gif",
+    // TODO: Thailand Run/Muay Thai goes ere
     credit: "Music: www.bensound.com",
     creditUrl: "http://www.bensound.com",
   },
@@ -84,14 +87,14 @@ const backgroundData = [
   //   src: "/slides/background/00_success_winning.gif",
   // },
   {
-    src: "/slides/background/00_ss-mm-reactconfau-2020.jpg",
-    style: { width: "1280px", height: "640px" },
+    src: "/slides/background/00_ss-mm-rubyconfth-2022.jpg",
+    style: { width: "1000px", height: "1000px" },
   },
 ];
 
 // var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
-var audio = new Audio("/audio/rockstar_22_sec_edit.mp3");
-// var audio = new Audio("/audio/bensound-extremeaction.mp3");
+// var audio = new Audio("/audio/rockstar_22_sec_edit.mp3");
+var audio = new Audio("/audio/bensound-extremeaction.mp3");
 
 const onTheDay1 = () =>
   new Date().getTime() > new Date("20 Feb 2020 15:50:00 GMT+1100").getTime()
