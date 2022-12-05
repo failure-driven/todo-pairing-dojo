@@ -39,7 +39,7 @@ const backgroundData = [
     // src: "/slides/background/00_ss-mm-reactconfau-2020.jpg",
     // style: { width: "1280px", height: "640px" },
     src: "/slides/background/00_ss-mm-rubyconfth-2022.jpg",
-    style: { width: "1000px", height: "1000px" },
+    style: { width: "945px", height: "945px" },
   },
   {
     src: "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
@@ -88,7 +88,7 @@ const backgroundData = [
   // },
   {
     src: "/slides/background/00_ss-mm-rubyconfth-2022.jpg",
-    style: { width: "1000px", height: "1000px" },
+    style: { width: "945px", height: "945px" },
   },
 ];
 
