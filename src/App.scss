@@ -174,9 +174,24 @@ $background-color: #161418;
     #fresho-logo {
       visibility: visible;
       position: absolute;
-      margin-left: 46vw;
+      margin-left: 15vw;
       width: 8vw;
-      top: 82vh;
+      top: 65vh;
+    }
+    #zepto-logo {
+      color: white;
+      visibility: visible;
+      position: absolute;
+      margin-left: 72vw;
+      top: 70vh;
+    }
+    #pair-with-me {
+      color: white;
+      visibility: visible;
+      position: absolute;
+      margin-left: 41vw;
+      top: 64vh;
+      width: 32vh;
     }
   }
 }
