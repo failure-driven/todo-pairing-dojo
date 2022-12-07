@@ -63,6 +63,11 @@ const backgroundData = [
     creditUrl: "http://www.bensound.com",
   },
   {
+    src: "/slides/background/03_bangkok_run.gif",
+    credit: "Music: www.bensound.com",
+    creditUrl: "http://www.bensound.com",
+  },
+  {
     src: "/slides/background/04_john-fornander-C56oCEdK14c-unsplash.jpg",
     credit: "Photo by John Fornander on Unsplash",
     creditUrl: "https://unsplash.com/photos/C56oCEdK14c",
@@ -135,6 +140,19 @@ const extraData = [
   ],
   null,
   null,
+  [
+    {
+      action: action => {
+        if (action === "play") {
+          audio.play();
+        }
+        if (action === "stop") {
+          audio.pause();
+          audio.load();
+        }
+      },
+    },
+  ],
   [
     {
       action: action => {
