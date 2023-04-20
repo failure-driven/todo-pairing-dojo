@@ -44,8 +44,10 @@ const backgroundData = [
     // style: { width: "1280px", height: "720px" },
     // src: "/slides/background/00_ss-mm-reactconfau-2020.jpg",
     // style: { width: "1280px", height: "640px" },
-    src: "/slides/background/00_ss-mm-rubyconfth-2022.jpg",
-    style: { width: "945px", height: "945px" },
+    // src: "/slides/background/00_ss-mm-rubyconfth-2022.jpg",
+    // style: { width: "945px", height: "945px" },
+    src: "/slides/background/00_ss-mm-reactmiami-2023.jpg",
+    style: { width: "1280px", height: "800px" },
   },
   {
     src: "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
@@ -63,13 +65,9 @@ const backgroundData = [
   },
   {
     // src: "/slides/background/03_melbourne_run.gif",
-    src: "/slides/background/03_sydney_run.gif",
-    // TODO: Thailand Run/Muay Thai goes ere
-    credit: "Music: www.bensound.com",
-    creditUrl: "http://www.bensound.com",
-  },
-  {
-    src: "/slides/background/03_bangkok_run.gif",
+    // src: "/slides/background/03_sydney_run.gif",
+    // src: "/slides/background/03_bangkok_run.gif",
+    src: "/slides/background/03_miami_run.gif",
     credit: "Music: www.bensound.com",
     creditUrl: "http://www.bensound.com",
   },
@@ -98,8 +96,8 @@ const backgroundData = [
   //   src: "/slides/background/00_success_winning.gif",
   // },
   {
-    src: "/slides/background/00_ss-mm-rubyconfth-2022.jpg",
-    style: { width: "945px", height: "945px" },
+    src: "/slides/background/00_ss-mm-reactmiami-2023.jpg",
+    style: { width: "1280px", height: "800px" },
   },
 ];
 
@@ -146,19 +144,6 @@ const extraData = [
   ],
   null,
   null,
-  [
-    {
-      action: action => {
-        if (action === "play") {
-          audio.play();
-        }
-        if (action === "stop") {
-          audio.pause();
-          audio.load();
-        }
-      },
-    },
-  ],
   [
     {
       action: action => {
