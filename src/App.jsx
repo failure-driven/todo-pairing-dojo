@@ -46,8 +46,10 @@ const backgroundData = [
     // style: { width: "1280px", height: "640px" },
     // src: "/slides/background/00_ss-mm-rubyconfth-2022.jpg",
     // style: { width: "945px", height: "945px" },
-    src: "/slides/background/00_ss-mm-reactmiami-2023.jpg",
-    style: { width: "1280px", height: "800px" },
+    // src: "/slides/background/00_ss-mm-reactmiami-2023.jpg",
+    // style: { width: "1280px", height: "800px" },
+    src: "/slides/background/00_ss-mm-railsconf-2023.jpg",
+    style: { width: "1094px", height: "800px" },
   },
   {
     src: "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
@@ -96,8 +98,8 @@ const backgroundData = [
   //   src: "/slides/background/00_success_winning.gif",
   // },
   {
-    src: "/slides/background/00_ss-mm-reactmiami-2023.jpg",
-    style: { width: "1280px", height: "800px" },
+    src: "/slides/background/00_ss-mm-railsconf-2023.jpg",
+    style: { width: "1094px", height: "800px" },
   },
 ];
 
