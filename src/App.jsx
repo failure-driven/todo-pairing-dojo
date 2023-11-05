@@ -48,8 +48,10 @@ const backgroundData = [
     // style: { width: "945px", height: "945px" },
     // src: "/slides/background/00_ss-mm-reactmiami-2023.jpg",
     // style: { width: "1280px", height: "800px" },
-    src: "/slides/background/00_ss-mm-railsconf-2023.jpg",
-    style: { width: "1094px", height: "800px" },
+    // src: "/slides/background/00_ss-mm-railsconf-2023.jpg",
+    // style: { width: "1094px", height: "800px" },
+    src: "/slides/background/00_ss-mm-openconf-2023.jpg",
+    style: { width: "1280px", height: "720px" },
   },
   {
     src: "/slides/background/01_austin-distel-wawEfYdpkag-unsplash.jpg",
@@ -98,10 +100,6 @@ const backgroundData = [
   //   // GOOD lolcommit goes here
   //   src: "/slides/background/00_success_winning.gif",
   // },
-  {
-    src: "/slides/background/00_ss-mm-railsconf-2023.jpg",
-    style: { width: "1094px", height: "800px" },
-  },
 ];
 
 // var audio = new Audio("/audio/rockstar_40_sec_edit.mp3");
