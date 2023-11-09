@@ -112,6 +112,10 @@ const backgroundData = [
   { src: "/slides/slide.007.jpeg" },
   { src: "/slides/slide.008.jpeg" },
   { src: "/slides/slide.009.jpeg" },
+  {
+    src: "/slides/background/00_ss-mm-openconf-2023.jpg",
+    style: { width: "1280px", height: "720px" },
+  },
   // {
   //   // GOOD lolcommit goes here
   //   src: "/slides/background/00_success_winning.gif",
