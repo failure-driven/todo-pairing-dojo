@@ -176,14 +176,26 @@ $background-color: #161418;
       position: absolute;
       margin-left: 15vw;
       width: 8vw;
-      top: 65vh;
+      top: 63vh;
     }
-    #mable-logo{
-      // color: white;
+    #jetbrains-logo{
       visibility: visible;
       position: absolute;
-      margin-left: 72vw;
-      top: 70vh;
+      margin-left: 25vw;
+      width: 11vw;
+      top: 62vh;
+    }
+    #mable-logo{
+      visibility: visible;
+      position: absolute;
+      margin-left: 62vw;
+      top: 67vh;
+    }
+    #cepal-logo{
+      visibility: visible;
+      position: absolute;
+      margin-left: 80vw;
+      top: 65vh;
     }
     #pair-with-me {
       color: white;

@@ -7,6 +7,8 @@ import Slideshow from "./Slideshow";
 
 const Final = () => (
   <div className="final">
+    <img src="/other/cepal_logo.png" alt="Cepal Logo" id="cepal-logo" />
+    <img src="/other/jetbrains_logo.png" alt="JetBrains Logo" id="jetbrains-logo" />
     <img src="fresho_logo.png" alt="Fresho logo" id="fresho-logo" />
     <img src="pair_with_me_qr.png" alt="pair-with.me" id="pair-with-me" />
     <svg id="mable-logo" xmlns="http://www.w3.org/2000/svg" width="230" height="64" viewBox="0 0 115 32" fill="none">
