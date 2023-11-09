@@ -73,6 +73,9 @@ const backgroundData = [
   //   src: "/slides/background/00_thats_how_you_pair.gif",
   // },
   {
+    src: "/other/open_conf_pair_with_me_tweet.png",
+  },
+  {
     src: "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
     credit: "Photo by Nathan Dumlao on Unsplash",
     creditUrl: "https://unsplash.com/photos/6VhPY27jdps",
@@ -85,6 +88,9 @@ const backgroundData = [
     src: "/slides/background/03_atlanta_run.gif",
     credit: "Music: www.bensound.com",
     creditUrl: "http://www.bensound.com",
+  },
+  {
+    src: "/other/open_conf_pair_with_me_tweet.png",
   },
   {
     src: "/slides/background/04_john-fornander-C56oCEdK14c-unsplash.jpg",
@@ -155,6 +161,20 @@ const extraData = [
   ],
   null,
   null,
+  null,
+  [
+    {
+      action: action => {
+        if (action === "play") {
+          audio.play();
+        }
+        if (action === "stop") {
+          audio.pause();
+          audio.load();
+        }
+      },
+    },
+  ],
   [
     {
       action: action => {
