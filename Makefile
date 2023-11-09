@@ -23,7 +23,15 @@ master:
 	git checkout demo/no-delete
 
 lol:
-	ls -lrt ~/.lolcommits/todo-pairing-dojo | tail -1 | awk '{printf sprintf("<img style=\"height: 100vh; display: block; margin: auto;\" src=\"/Users/michael/.lolcommits/todo-pairing-dojo/%s\">", $$9)}' > ~/lolcommits.html && open ~/lolcommits.html
+	@ls -lrt ~/.lolcommits/todo-pairing-dojo | \
+		tail -1 | \
+		awk '{printf sprintf("<img \
+			style=\"height: 100vh; \
+			display: block; \
+			margin: auto;\" \
+			src=\"'${HOME}'/.lolcommits/todo-pairing-dojo/%s\">", $$9)}' > \
+		~/lolcommits.html && \
+		open ~/lolcommits.html
 
 # n for notifications
 n:
