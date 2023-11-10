@@ -78,6 +78,10 @@ const backgroundData = [
     src: "/other/open_conf_pair_with_me_tweet.png",
   },
   {
+    // BAD lolcommit goes here
+    src: "/slides/background/00_thats_how_you_pair_openconf.gif",
+  },
+  {
     src: "/slides/background/02_nathan-dumlao-6VhPY27jdps-unsplash.jpg",
     credit: "Photo by Nathan Dumlao on Unsplash",
     creditUrl: "https://unsplash.com/photos/6VhPY27jdps",
@@ -165,6 +169,7 @@ const extraData = [
     //   style: { width: "1280px", height: "720px" },
     // },
   ],
+  null,
   null,
   null,
   null,
