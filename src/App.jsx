@@ -62,7 +62,9 @@ const backgroundData = [
     // style: { width: "1280px", height: "800px" },
     // src: "/slides/background/00_ss-mm-railsconf-2023.jpg",
     // style: { width: "1094px", height: "800px" },
-    src: "/slides/background/00_ss-mm-openconf-2023.jpg",
+    // src: "/slides/background/00_ss-mm-openconf-2023.jpg",
+    // style: { width: "1280px", height: "720px" },
+    src: "/slides/background/00_ss-mm-lastconf-2023.png",
     style: { width: "1280px", height: "720px" },
   },
   {
@@ -75,7 +77,7 @@ const backgroundData = [
   //   src: "/slides/background/00_thats_how_you_pair.gif",
   // },
   {
-    src: "/other/open_conf_pair_with_me_tweet.png",
+    src: "/other/last_conf_pair_with_me_tweet.png",
   },
   {
     // BAD lolcommit goes here
@@ -97,7 +99,7 @@ const backgroundData = [
     creditUrl: "http://www.bensound.com",
   },
   {
-    src: "/other/open_conf_pair_with_me_tweet.png",
+    src: "/other/last_conf_pair_with_me_tweet.png",
   },
   {
     src: "/slides/background/04_john-fornander-C56oCEdK14c-unsplash.jpg",
@@ -120,7 +122,7 @@ const backgroundData = [
   { src: "/slides/slide.008.jpeg" },
   { src: "/slides/slide.009.jpeg" },
   {
-    src: "/slides/background/00_ss-mm-openconf-2023.jpg",
+    src: "/slides/background/00_ss-mm-lastconf-2023.png",
     style: { width: "1280px", height: "720px" },
   },
   // {
